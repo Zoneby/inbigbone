@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>声优都是怪物 枪神记可以为所欲为了</title>
+<link rel="stylesheet" href="./styles/main.css">
+<script>
+!function(b, a){
+	var c = b.documentElement;
+	a = function() {
+		var a = c.clientWidth;
+		a && (c.style.fontSize = a/375 * 100 + "px")
+	};
+	window.addEventListener("orientationchange" in window ? "orientationchange" : "resize", a, !1);
+	b.addEventListener("DOMContentLoaded", a, !1)
+}(document, window);
+</script>
+</head>
+
+<body ontouchmove="return false;">
+	<audio src="" id="bgm"></audio>
+	<div class="loading" style="display: block;">
+		<div class="dna"></div>
+		<div class="percent">0%</div>
+	</div>
+
+	<div class="container">
+		<div class="videobox">
+			<video src="" id="mainvideo" playsinline webkit-playsinline></video>
+		</div>
+
+		<div class="page pagestart">
+			<div class="start-btn"></div>
+		</div>
+		<div class="page pageend">
+			<div class="unlock-dna-btn"></div>
+		</div>
+		<div class="page pagescan">
+			<div class="fingerprint"></div>         
+			<div class="light"></div>
+		</div>
+		<div class="page pagerole">
+			<div class="role role1">
+				<div class="role1-call share-btn"></div>
+			</div>
+			<div class="join-btn"></div>
+			<div class="other-btn"></div>
+		</div>
+		<div class="page pagekv">
+			<!-- <div class="qr-code"></div> -->
+			<img src="./images/qr-code.png" alt="二维码" class="qr-code">		
+			<!-- <div class="qr-text"></div> -->
+			<div class="qr-text"></div>
+			<div class="kv-video" id="mod_player1"></div>
+			<div class="back-btn"></div>
+		</div>
+		<div class="page share-wrap">
+			<div class="share-arrow"></div>
+		</div>
+	</div>
+
+
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+<script src="http://vm.gtimg.cn/tencentvideo/txp/js/txplayer.js"></script>
+<script src="http://www.bigbone.cn/mobileShare.js"></script>
+<script>
+;(function () {
+	var PreLoad=function(a,b){var c=b||{};this.source=a,this.count=0,this.total=a.length,this.onload=c.onload,this.prefix=c.prefix||"",this.init()};PreLoad.prototype.init=function(){var a=this;a.source.forEach(function(b){var c=b.replace(/[#\?].*$/,'').substr(b.lastIndexOf(".")+1).toLowerCase(),d=a.prefix+b;switch(c){case"js":a.script.call(a,d);break;case"css":a.stylesheet.call(a,d);break;case"svg":case"jpg":case"gif":case"png":case"jpeg":a.image.call(a,d)}})},PreLoad.prototype.getProgress=function(){return Math.round(this.count/this.total*100)},PreLoad.prototype.image=function(a){var b=document.createElement("img");this.load(b,a),b.src=a},PreLoad.prototype.stylesheet=function(a){var b=document.createElement("link");this.load(b,a),b.rel="stylesheet",b.type="text/css",b.href=a,document.head.appendChild(b)},PreLoad.prototype.script=function(a){var b=document.createElement("script");this.load(b,a),b.type="text/javascript",b.src=a,document.head.appendChild(b)},PreLoad.prototype.load=function(a,b){var c=this;a.onload=a.onerror=a.onabort=function(a){c.onload&&c.onload({count:++c.count,total:c.total,item:b,type:a.type})}};
+
+	$.fn.extend({
+		longpress: function(cb) {
+			var timeout = undefined
+				$this = this;
+			for(var i = 0; i < $this.length; i++) {
+				$this[i].addEventListener('touchstart', function(event) {
+					timeout = setTimeout(cb, 400);
+				}, false);
+
+				$this[i].addEventListener('touchend', function(event) { 
+					clearTimeout(timeout);
+				}, false);
+			}
+		}
+	});
+	var player1 = new Txplayer({
+	 	containerId: 'mod_player1',
+		  vid: 'y002552tmpr',
+		  width: '750',
+		  height: '446',
+		  autoplay: false,
+		  showPoster: !1,
+	 });
+	 var setPosterTimer = setInterval(function (){
+	 if (player1.setPoster){
+	 	player1.setPoster('./images/kv-video.jpg');
+	  	clearInterval(setPosterTimer);
+	 }
+	},50)
+	var app = {} || app,
+		video,
+		ua = navigator.userAgent.toLowerCase(),
+		device = {};
+
+	device.isIOS = ua.match(/iphone os/i) == "iphone os";
+	device.isAndroid = ua.match(/android/i) == "android";
+	device.isWx = ua.match(/MicroMessenger/i) == "micromessenger";
+
+	app.bgm = document.querySelector("#bgm");
+	app.resPath = "./";
+	app.resources = [
+		app.resPath+ 'images/pagestart.jpg',
+		app.resPath+ 'images/start-btn.png',
+		app.resPath+ 'images/unlock-btn-1.png',
+		app.resPath+ 'images/fingerprint.png',
+		app.resPath+ 'images/light.png',
+		app.resPath+ 'images/ajie-1.png',
+		app.resPath+ 'images/baomu-1.png',
+		app.resPath+ 'images/bianjiang-1.png',
+		app.resPath+ 'images/guohaoran-1.png',
+		app.resPath+ 'images/qiaoshiyu-1.png',
+		app.resPath+ 'images/shanxin-1.png',
+		app.resPath+ 'images/sushangqin-1.png',
+		app.resPath+ 'images/xujiaqi-1.png',
+		app.resPath+ 'images/yangtianxiang-1.png',
+		app.resPath+ 'images/zhangzhe-1.png',
+		app.resPath+ 'images/kv-video.jpg',
+		app.resPath+ 'images/other-btn.png',
+		app.resPath+ 'images/join-btn.png',
+		app.resPath+ 'images/pagescan.jpg',
+		app.resPath+ 'images/pagerole.jpg',
+		app.resPath+ 'images/pageend.jpg',
+		app.resPath+ 'images/pagekv1.jpg',
+		app.resPath+ 'images/pagekv2.jpg',
+		app.resPath+ 'images/qr-code.png',
+		app.resPath+ 'images/share-arrow1.png'
+	]
+
+	app.initVideo = function() {
+		video = document.querySelector("#mainvideo");
+		video.src = "http://videooc.tc.qq.com/vcloud1022.tc.qq.com/1022_df04110d2e40451485b14f62443c0982.f0.mp4?vkey=A59956740995F6D68A844124C79F4E3049EA4F5AC49DA1745CBFC076CACF69B9AEADAB3B3BCF740E73EA964E5E3A6D9D71667FEEBE638216F6B9D44907AC23BBBDB60CC8CAAF9CFD3744279C81A7844680CD60BB2B467CF9&sha=0";
+		video.addEventListener("timeupdate", function() {
+			if(!video.isPlayed && this.currentTime > 0.1) {
+				$('.pagestart').fadeOut(300);
+				video.isPlayed = !0;
+			}
+		});
+		video.addEventListener("ended", app.videoEndCallback);
+	}
+
+	app.videoEndCallback = function() {
+		$('.pageend').css('display', 'block');
+		$('.unlock-dna-btn').fadeIn(300);
+		if(device.isAndroid) {
+			$('.videobox').hide().css({zIndex: -1});
+		}
+		$('.pagestart').remove();
+	}
+
+	app.startPlay = function() {
+		video.style.display = 'block';
+		video.play();
+		// $('.pagestart').fadeOut(300);
+	}
+
+	app.randomPercent = function() {
+		app.percent = 0;
+		var myTimer = setInterval(function() {
+			app.percent += Math.round(Math.random()*1+5);
+			app.percentText = app.percent + "%";
+			$('.percent').text(app.percentText);
+			if(app.percent > 95) {
+
+				$('.loading').fadeOut(300);
+				$('.pagestart').show();
+
+				setTimeout(function() {
+					if(device.isIOS) {
+						app.startPlay();
+					}
+				}, 2000)
+				clearInterval(myTimer);
+			}
+		}, 50);
+	}
+
+	$(function () {
+		app.initVideo();
+
+		app.randomPercent();
+		
+		new PreLoad(app.resources, {
+			onload: function(load) {
+				var count = load.count,
+					total = load.total,
+					percent = Math.ceil(100*count / total);
+				if(percent === 100) {
+					// console.log("preload success");
+				}
+			}
+		});
+		
+
+		$('.start-btn').on('touchend', function() {
+			try{PTTSendClick('btn','video','播放视频');}catch(e){};
+			app.startPlay();
+		});
+
+		$('.unlock-dna-btn').on('touchend', function() {
+			
+			$('.pageend').fadeOut(300);
+			$('.pagescan').show();
+			$('#mainvideo').hide();
+		});
+
+		$('.fingerprint').longpress(function() {
+			var i = Math.ceil(Math.random()*10);
+			var j = i - 1;
+
+			var className = "role" + i;
+
+			// console.log(className);
+			$('.role').removeClass().addClass('role').addClass(className);
+			// console.log("longpress");
+			// 随机显示一个角色
+			$('.pagescan').fadeOut(300);
+			$('.pagerole').fadeIn(200);
+			try{
+				shareData.title = shareList[j];
+				shareData.timelineTitle =  shareList[j];
+				console.log(shareData.title);
+				mobileShare(shareData)
+			}catch(e){}
+		});
+
+		$('.join-btn').on("touchend", function() {
+			try{PTTSendClick('btn','link','枪神记预告片');}catch(e){};
+			// location.href = "http://www.qq.com"
+			// $('.pagekv').removeClass(className);
+			let i = Math.round(Math.random()+1);
+			app.kvclassName = 'kv'+i;
+			$('.pagekv').addClass(app.kvclassName).fadeIn(300);
+			$('.pagerole').fadeOut(200);
+		});
+
+		$('.other-btn').on("touchend", function() {
+			try{PTTSendClick('btn','link','返回上一页');}catch(e){};
+			$('.pagescan').show();
+			$('.pagerole').hide();
+			
+		});
+
+		$('.share-btn').on("touchend", function() {
+			try{PTTSendClick('btn','share','分享');}catch(e){};
+			$('.share-wrap').show();
+
+		});
+		$('.back-btn').on("touchend", function() {
+			$('.pagerole').fadeIn(300);
+			$('.pagekv').hide();
+			$('.pagekv').removeClass(app.kvclassName);
+		})
+		$('.share-wrap').on("touchend", function() {
+			$(this).hide();
+		});
+		document.addEventListener("WeixinJSBridgeReady",function (){
+			video.play();
+			video.pause();
+		}, false)
+	})
+	
+})();
+</script>
+
+<script>
+	var shareData = {
+		title: '顶级声优怪物集结，我居然可以订阅阿杰的声音！',
+	    desc: '你的耳朵准备好了吗？',
+	    timelineTitle:'顶级声优怪物集结，我居然可以订阅阿杰的声音！',
+	    imgUrl: 'images/share-icon.jpg'
+	}
+
+	var shareList = [
+		'顶级声优怪物集结，我居然可以订阅阿杰的声音！',
+		'顶级声优怪物集结，我居然可以订阅宝木的声音！',
+		'顶级声优怪物集结，我居然可以订阅边江的声音！',
+		'顶级声优怪物集结，我居然可以订阅郭浩然的声音！',
+		'顶级声优怪物集结，我居然可以订阅乔诗语的声音！',
+		'顶级声优怪物集结，我居然可以订阅山新的声音！',
+		'顶级声优怪物集结，我居然可以订阅苏尚卿的声音！',
+		'顶级声优怪物集结，我居然可以订阅徐佳琦的声音！',
+		'顶级声优怪物集结，我居然可以订阅杨天翔的声音！',
+		'顶级声优怪物集结，我居然可以订阅张喆的声音！'
+	]
+</script>
+<!-- 统计与分享
+<script src="//ossweb-img.qq.com/images/js/TGMobileShare/TGMobileShare.min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+
+<script type="text/javascript">
+    //此段代码不能放到外链JS中，
+    var setSite={ //设置网站属性
+     siteType:"a20171207tpsh5", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+     pageType:"index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+     pageName:"首页", //必填项:页面中文名
+     osact:0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+     ingame:1, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+     stayTime:1 //选填项:是否需要统计停留时长boolean；默认是1
+    }
+    if(typeof(pgvMain)=='function')pgvMain();//千万不能忘记！
+    TGMobileShare({
+        shareTitle:'顶级声优怪物集结，我居然可以订阅阿杰的声音！', //不设置或设置为空时，页面有title，则调取title
+        shareDesc:"你的耳朵准备好了吗？", //不设置或设置为空时，页面有Description，则调取Description
+        shareImgUrl:'images/share-icon.jpg', //分享图片尺寸200*200，且填写绝对路径
+        shareLink:'顶级声优怪物集结，我居然可以订阅阿杰的声音！', //分享链接要跟当前页面同域名(手Q分享有这个要求) ,不设置或设置为空时，默认调取当前URLs
+        actName:'a20171207tpsh5'
+    });
+</script> -->
+</body>
+</html>
