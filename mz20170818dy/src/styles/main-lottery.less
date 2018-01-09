@@ -1,0 +1,271 @@
+@-webkit-keyframes endman {
+	0% {background-position: -2*@rem -2*@rem}
+	6% {background-position: -2*@rem -420*@rem}
+	12% {background-position: -262*@rem -2*@rem}
+	18% {background-position: -2*@rem -838*@rem}
+	24% {background-position: -262*@rem -420*@rem}
+	30% {background-position: -522*@rem -2*@rem}
+	36% {background-position: -2*@rem -1256*@rem}
+	42% {background-position: -262*@rem -838*@rem}
+	48% {background-position: -522*@rem -420*@rem}
+	54% {background-position: -782*@rem -2*@rem}
+	60% {background-position: -262*@rem -1256*@rem}
+	66% {background-position: -522*@rem -838*@rem}
+	72% {background-position: -782*@rem -420*@rem}
+	78% {background-position: -1042*@rem -2*@rem}
+	84% {background-position: -522*@rem -1256*@rem}
+	90% {background-position: -782*@rem -838*@rem}
+	100% {background-position: -1042*@rem -420*@rem}
+}
+.pagelottery {
+	background: url(../images/bg_lottery.jpg) no-repeat 0 0;
+	background-size: 750*@rem 1220*@rem;
+	display: none;
+	.wrap {
+		background-color: rgba(0,0,0,.8);
+		display: none;
+	}
+	.productbox {
+		width: 574*@rem;
+		height: 450*@rem;
+		border: 1px solid #000;
+		border-radius: 8*@rem;
+		background: #e96ae1;
+		position: absolute;
+		left: 50%;
+		margin-left: -287*@rem;
+		top: 342*@rem;
+		.innerbox {
+			width: 574*@rem;
+			height: 430*@rem;
+			background: #fff;
+			border: 1px solid #000;
+			border-radius: 8*@rem;
+			position: absolute;
+			left: -1px;
+			top: -1px;
+		}
+		.lottery_price {
+			// width: 150*@rem;
+			// height: 372*@rem;
+			// background: url(../images/lottery_price.png) no-repeat 0 0;
+			// background-size: 150*@rem 372*@rem;
+			// position: absolute;
+			right: 25*@rem;
+			top: 25*@rem;
+		}
+		img {
+			width: 360*@rem;
+			margin-left: 10*@rem;
+			margin-top: 10*@rem;
+		}
+	}
+	.endman {
+		width:256*@rem; 
+		height:414*@rem;
+		display:inline-block;
+		overflow:hidden; 
+		background-repeat: no-repeat;
+		background-image:url(../images/endman.png);
+		background-size: 1300*@rem 1672*@rem;
+		position: absolute;
+		-webkit-animation: endman 2s steps(1) both infinite alternate;
+		&.m1 {
+			left: 80*@rem;
+			top: 820*@rem;
+			-webkit-transform: scale(1.8);
+		}
+		&.m2 {
+			left: 460*@rem;
+			top: 820*@rem;
+			-webkit-transform: scale(1.8);
+		}
+		&.m3 {
+			left: 250*@rem;
+			top: 820*@rem;
+			-webkit-transform: scale(2);
+		}
+	}
+	.lottery_grass {
+		// width: 750*@rem;
+		// height: 289*@rem;
+		// background: url(../images/lottery_grass.png) no-repeat 0 0;
+		// background-size: 750*@rem 289*@rem;
+		// position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+	.btn_link {
+		// width: 291*@rem;
+		// height: 90*@rem;
+		// background: url(../images/btn_link.png) no-repeat 0 0;
+		// background-size: 291*@rem 90*@rem;
+		// position: absolute;
+		left: 60*@rem;
+		bottom: 200*@rem;
+	}
+	.btn_lottery {
+		// width: 291*@rem;
+		// height: 90*@rem;
+		// background: url(../images/btn_lottery.png) no-repeat 0 0;
+		// background-size: 291*@rem 90*@rem;
+		// position: absolute;
+		right: 60*@rem;
+		bottom: 200*@rem;
+	}
+	.nochance {
+		background-image: url(../images/cover_nochance.png);
+		background-repeat:no-repeat;
+		background-size: 750*@rem 1220*@rem;
+		.btn_restart {
+			// width: 281*@rem;
+			// height: 96*@rem;
+			// background: url(../images/btn_restart.png) no-repeat 0 0;
+			// background-size: 281*@rem 96*@rem;
+			// position: absolute;
+			left: 90*@rem;
+			top: 900*@rem;
+		}
+		.btn_share {
+			// width: 281*@rem;
+			// height: 96*@rem;
+			// background: url(../images/btn_share.png) no-repeat 0 0;
+			// background-size: 281*@rem 96*@rem;
+			// position: absolute;
+			right: 60*@rem;
+			top: 900*@rem;
+		}
+		.btn_delete {
+			width: 100*@rem;
+			height: 100*@rem;
+			position: absolute;
+			right: 46*@rem;
+			top: 104*@rem;
+		}
+		.sharewrap {
+			background: url(../images/sharetip.png) no-repeat 0 0;
+			background-size: 750*@rem 1220*@rem;
+			display: none;
+		}
+	}
+	.chance {
+		background-image: url(../images/cover_chance.png);
+		background-repeat:no-repeat;
+		background-size: 750*@rem 1220*@rem;
+		.btn_egg {
+			width: 250*@rem;
+			height: 350*@rem;
+			position: absolute;
+			left: 260*@rem;
+			top: 480*@rem;
+		}
+	}
+	.unwin {
+		background-image: url(../images/cover_unwin.png);
+		background-repeat:no-repeat;
+		background-size: 750*@rem 1220*@rem;
+		.btn_delete {
+			width: 100*@rem;
+			height: 100*@rem;
+			position: absolute;
+			left: 560*@rem;
+			top: 474*@rem;
+		}
+		.btn_product {
+			width: 300*@rem;
+			height: 120*@rem;
+			position: absolute;
+			left: 227*@rem;
+			top: 835*@rem;
+		}
+	}
+	.win {
+		// background-image: url(../images/cover_win.png);
+		background-repeat:no-repeat;
+		background-size: 750*@rem 1220*@rem;
+		.infobox {
+			width: 580*@rem;
+			height: 720*@rem;
+			border: 1px solid #000;
+			border-radius: 8*@rem;
+			background: #ff9933;
+			position: absolute;
+			left: 50%;
+			margin-left: -290*@rem;
+			top: 420*@rem;
+			.textwrap {
+				width: 320*@rem;
+				height: 180*@rem;
+				text-align: right;
+				position: absolute;
+				left: 0;
+				top: 50*@rem;
+				.get {
+					font-size: 40*@rem;
+					line-height: 60*@rem;
+					font-weight: bold;
+				}
+				.award_name {
+					font-size: 30*@rem;
+					line-height: 60*@rem;
+					font-weight: bold;
+				}
+				.addresstip {
+					font-size: 22*@rem;
+					line-height: 60*@rem;
+				}
+			}
+			.picbox {
+				width: 200*@rem;
+				height: 200*@rem;
+				position: absolute;
+				right: 45*@rem;
+				top: 40*@rem;
+				border: 1px solid #000;
+				img {
+					width: 100%;
+					// -webkit-transform: translate3d(0,-50%;);
+				}
+			}
+			form {
+				position: relative;
+				margin-top: 270*@rem;
+				text-align: center;
+				font-size: 32*@rem;
+				.infoline {
+					margin-bottom: 30*@rem;
+				}
+				input {
+					width: 340*@rem;
+					height: 64*@rem;
+					border-radius: 32*@rem;
+					background: transparent;
+					border: 1px solid #000;
+					outline: none;
+					font-size: 28*@rem;
+					padding-left: 20*@rem;
+				}
+				.btn_submit {
+					// display: inline-block;
+					// width: 312*@rem;
+					// height: 115*@rem;
+					// background: url(../images/btn_submit.png) no-repeat 0 0;
+					// background-size: 312*@rem 115*@rem;
+					// position: absolute;
+					left: 50%;
+					margin-left: -156*@rem;
+					// bottom: 10*@rem;
+				}
+			}
+		}
+		.winman {
+			width: 750*@rem;
+			height: 467*@rem;
+			background: url(../images/cover_winman.png) no-repeat 0 0;
+			background-size: 750*@rem 467*@rem;
+			position: absolute;
+			left: 0;
+			top: 30*@rem; 
+		}
+	}
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>王者荣耀城市赛</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="./styles/swiper.min.css">
+	<link rel="stylesheet" href="./styles/main.css">
+	
+	<!-- <link rel="stylesheet" href="//game.gtimg.cn/images/ /cp/a20170918KingOfGlory/styles/swiper.min.css"> 
+	<link rel="stylesheet" href="./styles/main.css"> -->
+	
+	<script>
+		if(/Android(\d+\.\d+)/.test(navigator.userAgent)) {
+			var version = parseFloat(RegExp.$1)
+			if (version > 2.3) {
+				var phoneScale = parseInt(window.screen.width)/640;
+				document.write('<meta name="viewport" content="width=750, user-scalable=no, minimum-scale='+ phoneScale +', maximum-scale='+ phoneScale+', target-densitydpi=device-depi">')
+			} else {
+				document.write('<meta name="viewport" content="width=750" user-scalable=no, target-densitydpi=device-dpi>')
+			}
+		}else {
+			document.write('<meta name="viewport" content="width=750, user-scalable=no, minimal-ui">')
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="part1">
+			<div class="list">
+				<ul class="pic-list" id="tab">
+					<li class="pic-1 select"><span class="li-shadow" style="display: none;"></span></li>
+					<li class="pic-2"><span class="li-shadow"></span></li>
+					<li class="pic-3"><span class="li-shadow"></span></li>
+				</ul>
+			</div>
+			<div class="video-box" id="video-list">
+				<div class="playerbox1 playerbox" id="mod_player1"></div>
+				<div class="playerbox2 playerbox" id="mod_player2"></div>
+				<div class="playerbox3 playerbox" id="mod_player3"></div>
+			</div>
+			
+			<div class="full-screen-tips"></div>
+			<div class="btn-signup"></div>
+			<div class="btn-invite"></div>
+			<div class="logo p1-logo"></div>
+			<div class="more"></div>
+		</div>
+		<div class="part2">
+			<div class="part2-title1 title"></div>
+			
+			<div class="pic-des1 des-text"></div>
+			<!-- 轮播图 -->
+			<div class="swiper-button-prev btn-prev slide-switch"></div>
+			<div class="swiper-container s-container">
+				<div class="swiper-wrapper s-wrapper">
+					<div class="swiper-slide slide-type1" style="background-image: url(./images/part2-slide1.png);"></div>
+					<div class="swiper-slide slide-type1" style="background-image: url(./images/part2-slide2.png);"></div>
+					<div class="swiper-slide slide-type1" style="background-image: url(./images/part2-slide3.png);"></div>
+				</div>
+			</div>
+			<div class="swiper-button-next btn-next slide-switch"></div>
+			
+			<div class="part2-title2 title"></div>
+			<div class="swiper-button-prev type2-prev-btn"></div>
+			<div class="swiper-container part2-2-content">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide slide-type2" style="background-image: url(./images/part2-competition1.png);"></div>
+					<div class="swiper-slide slide-type2" style="background-image: url(./images/part2-competition2.png);"></div>
+				</div>
+			</div>
+			<div class="swiper-button-next type2-next-btn"></div>
+
+			<div class="logo p2-logo"></div>
+		</div>
+		
+		<div class="share-page"></div>
+	</div>
+
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+<!-- <script src="//imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2_jq.js"></script> -->
+ <script src="http://vm.gtimg.cn/tencentvideo/txp/js/txplayer.js"></script>
+<script src="./scripts/swiper.jquery.js"></script>
+<script>
+
+
+;(function() {
+	$(".btn-signup").on("click", function() {
+		try{PTTSendClick('link', 'signup','报名');}catch(e){};
+		location.href = 'http://igame.qq.com/mobilecomm/wegames/index.php?inner_type=1&siteid=100370';
+	}) 
+	$(".btn-invite").bind("click", function() {
+		$(".share-page").fadeIn(300);
+	});
+	$(".share-page").bind("click", function() {
+		$(".share-page").fadeOut(300);
+	});
+
+	 var swiper1 = new Swiper('.s-container', {
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        prevButton: '.btn-prev',
+         nextButton: '.btn-next',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+        },
+        onSlideChangeEnd: function(swiper) {
+        	var desClass = "pic-des" + (++swiper.activeIndex); 
+        	$(".des-text").removeClass('pic-des1 pic-des2 pic-des3').addClass(desClass);
+
+        }
+    });
+	var swiper2 = new Swiper('.part2-2-content', {
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        prevButton: '.type2-prev-btn',
+         nextButton: '.type2-next-btn',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+        }
+    });
+
+	 var player1 = new Txplayer({
+	 	containerId: 'mod_player1',
+		  vid: 'f0550uelvib',
+		  width: '560',
+		  height: '315',
+		  autoplay: false,
+		  showPoster: !1,
+	 });
+	 setTimeout(function (){
+	 	player1.setPoster('./images/video-cover1.png');
+	 },500);
+
+	 var setPosterTimer = setInterval(function (){
+	 if (player1.setPoster){
+	 	player1.setPoster('./images/video-cover1.png');
+	 	player2.setPoster('./images/video-cover2.png');
+	 	player3.setPoster('./images/video-cover3.png');
+	  	clearInterval(setPosterTimer);
+	 }
+	},50)
+	  var player2 = new Txplayer({
+	 	containerId: 'mod_player2',
+		  vid: 'g0550im5k8w',
+		  width: '560',
+		  height: '315',
+		  autoplay: false
+	 });
+	setTimeout(function (){
+	 	player2.setPoster('./images/video-cover2.png');
+	 },500);
+	   var player3 = new Txplayer({
+	 	containerId: 'mod_player3',
+		  vid: 't0550dxkajn',
+		  width: '560',
+		  height: '315',
+		  autoplay: false
+	 });
+
+	$("#tab li").click(function() {
+
+		var i = $(this).index();
+		// console.log(i);
+		var j = i+1;
+		// console.log(j);
+		$(this).addClass('select').siblings().removeClass('select');
+		$(this).children('span').hide();
+		$(this).siblings().children('span').show();
+		$("#video-list div").eq(i).show().siblings().hide();
+		$(".playerbox").hide();
+		$("#mod_player" + j).show();
+	});
+
+
+})();
+</script>
+<script src="http://img.bigbone.cn/static/mobileShare.js"></script>
+<script>
+mobileShare({
+    title: '王者荣耀城市赛',
+    desc: '触手可及的电竞梦想',
+    imgUrl: 'images/share-icon.png'
+})
+</script>
+</body>
+</html>

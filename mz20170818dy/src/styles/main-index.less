@@ -1,0 +1,78 @@
+html,body {padding: 0; margin: 0; width: 100%; height: 100%; -webkit-user-select: none; user-select: none; overflow: hidden;}
+div, i, a,p{padding: 0;margin: 0;-webkit-box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+.container {
+	width: 750*@rem;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.page,.wrap {width: 100%;height: 100%;position: absolute;left: 0;top: 0;overflow: hidden;}
+
+.sp {
+	display:inline-block; 
+	overflow:hidden; 
+	position: absolute;
+	background-repeat: no-repeat;
+	background-image:url(../images/sp.png);
+	background-size: 1386*@rem 512*@rem;
+}
+
+.ajust {width:330*@rem; height:60*@rem; background-position: -910*@rem -428*@rem}
+.btn_link {width:292*@rem; height:90*@rem; background-position: -910*@rem -240*@rem}
+.btn_look {width:332*@rem; height:174*@rem; background-position: -2*@rem -296*@rem}
+.btn_lottery {width:292*@rem; height:90*@rem; background-position: -910*@rem -334*@rem}
+.btn_repick {width:298*@rem; height:114*@rem; background-position: -338*@rem -296*@rem}
+.btn_restart {width:282*@rem; height:96*@rem; background-position: -338*@rem -414*@rem}
+.btn_share {width:282*@rem; height:96*@rem; background-position: -624*@rem -414*@rem}
+.btn_submit {width:312*@rem; height:116*@rem; background-position: -910*@rem -2*@rem}
+.btn_upload {width:298*@rem; height:114*@rem; background-position: -910*@rem -122*@rem}
+.iconplus {width:108*@rem; height:102*@rem; background-position: -640*@rem -296*@rem}
+.indexface {width:178*@rem; height:178*@rem; background-position: -1206*@rem -240*@rem}
+.lottery_grass {width:750*@rem; height:290*@rem; background-position: -2*@rem -2*@rem}
+.lottery_price {width:150*@rem; height:328*@rem; background-position: -756*@rem -2*@rem}
+
+.pageindex {
+	background: url(../images/bg_index.jpg) no-repeat 0 0;
+	background-size: 750*@rem 1220*@rem;
+	.btn_look {
+		// width: 332*@rem;
+		// height: 173*@rem;
+		// background: url(../images/btn_look.png) no-repeat 0 0;
+		// background-size: 332*@rem 173*@rem;
+		// position: absolute;
+		left: 50%;
+		margin-left: -176*@rem;
+		top: 960*@rem; 
+	}
+	.man {
+		width: 750*@rem;
+		height: 1220*@rem;
+		background-image: url(../images/indexman1.png);
+		background-repeat: no-repeat;
+		background-size: 750*@rem 1220*@rem;
+		position: absolute;
+		left: 0;
+		top: 0;
+		-webkit-animation: indexman 1s steps(1) infinite;
+	}
+	.indexface {
+		// width: 177*@rem;
+		// height: 177*@rem;
+		// background: url(../images/indexface.png) no-repeat 0 0;
+		// background-size: 177*@rem 177*@rem;
+		// position: absolute;
+		left: 285*@rem;
+		top: 69*@rem;
+		-webkit-animation: face .2s both infinite;
+	}
+}
+@-webkit-keyframes indexman {
+	0% {background-image: url(../images/indexman1.png);}
+	50% {background-image: url(../images/indexman2.png);}
+	100% {background-image: url(../images/indexman1.png);}
+}
+@-webkit-keyframes face {
+	0% {-webkit-transform: scale(1);}
+	100% {-webkit-transform: scale(.95);}
+}

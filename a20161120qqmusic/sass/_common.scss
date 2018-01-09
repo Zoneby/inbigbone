@@ -1,0 +1,129 @@
+*, :after, :before {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	color: #FFF;
+	background-color: #000;
+	font: 400 12px/1.5 "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Arial, "Hiragino Sans GB", STHeiti, 'Microsoft Yahei', sans-serif;
+	outline: 0;
+	-webkit-user-select: none;
+	        user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-text-size-adjust: none !important;
+	-webkit-transform: translate3d(0, 0, 0);
+}
+
+ul, li, h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.hide {
+	display: none !important;
+}
+
+//USEAGE: @include full-screen;
+@mixin full-screen {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	height: 100%;
+	width: 750px;
+	margin-left: -375px;
+	overflow: hidden;
+}
+
+@-webkit-keyframes loading-ani {
+	0%   { opacity: 1; -webkit-transform: scale(1); }
+	100% { opacity: 0; -webkit-transform: scale(2); }
+}
+
+.pages, .page {
+	@include full-screen;
+}
+
+.page:first-child {
+	z-index: 10;
+}
+
+@mixin full-top-left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@mixin top-left {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+@mixin top-center {
+	position: absolute;
+	top: 0;
+	left: 50%;
+}
+@mixin top-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+@mixin center-left {
+	position: absolute;
+	top: 50%;
+	left: 0;
+}
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+@mixin center-right {
+	position: absolute;
+	top: 50%;
+	right: 0;
+}
+@mixin bottom-left {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+@mixin bottom-center {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+}
+@mixin bottom-right {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+

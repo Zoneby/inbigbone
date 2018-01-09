@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>我们的小事</title>
+	<script type="text/javascript">
+		if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+			var version = parseFloat(RegExp.$1)
+			if (version > 2.3) {
+				var phoneScale = parseInt(window.screen.width) / 750
+				document.write('<meta name="viewport" content="width=750,minimum-scale=' + phoneScale + ',maximum-scale=' + phoneScale + ',target-densitydpi=device-dpi">')
+			} else {
+				document.write('<meta name="viewport" content="width=750,target-densitydpi=device-dpi">')
+			}
+		} else {
+			document.write('<meta name="viewport" content="width=750,user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+		}
+	</script>
+	<link rel="stylesheet" href="css/package.css">
+</head>
+<body>
+	<div class="container" id="J_container">
+    <!-- S 加载页 -->
+    <div class="ct_loading" id="J_loading">
+      <div class="ct_loading_logo">
+        <div style="position:absolute;top:8px;left:-2px;width:208px;height:208px;z-index:20;display:block;background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAADQBAMAAACEivJHAAAAMFBMVEUbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxuwHakTAAAAD3RSTlMAESIzRFVmd4iZqrvM3e5GKvWZAAAD0klEQVR4Xu3cPWsUURgF4HeyH+7GCJNGC5uANsHCRTAiIi5WgkIWrESJKym00SiCbbYQC5FkidhpktIufpZhUihotYIgSIqtIkkV0JhkM7vR5jLO7O6M83HPKcKeP/Awy52dmXvf95U/pPSgmOlByy8fXD4xKDJ45OTNx4soaPnRefHk6K1FAPR53JSOGCPPNUPfx8UnIy80Qs2HpvjGuFDTBX0qSmDST7RArWem/CfGlXpyyL4vIXLKSgrt3JBQObiQDForSchkZpNAa0UJnfRsfGinJBGSWYgL2coJLVnxoOY9iZhDtTjQ7lOJnNPrMaD3EiNXo0OrQ3GgvilfSMNC8C6IiNCMxMxwNOibxM7tKJBdjA+lrQjQjCTIcHho1UwCGVNhoVZZEiVbDwl9lIS55gPpWwnOeggFvZPEuRgGsgvJoZQVAnorGnImEHIuCHFJ0uWCIJck2pecs/CCoQ+iKZeCoVZJF5SpB0I/RFvuBEIVfVAuCGqY+iBjLgB6IxpzzB9qFXVC6bovtClaM+ELVfVCeT/IHtIL9Vk+0IpozpgPVNEN5dyQ95fD/XYC/OVExrpCVf1QvhvULOiHUrUu0JYAMtkFeo2ADneBSggo0wntCCQLHdAKBhrrgKoYKN8O7RYxUHq9DWoIKHNt0G8UdL0NmkdB/W1QGQVlvZBtoiDD8kBbAsukB/qKg856oCoOynugEg7KuKGmiYOMmgvaFmCmXdAGEhp1QUtIaMAFVZBQzgUVkVD6H9QykZBRd6CGQDPnQJtYaMKBfmGhcw60hIUGHKiKhfIOVMZCWQcqYKGUgtRthLyRFGQLOJaCttHQtII20dCEgjbQ0KiCfqKh4wr6goYOKOgVGtqvoHk01K+gChrKKeguGtqnoDIayiqohIYyCiqgoRQbGkJDfQoy0ZDBhgSeHhQ7e2/V0W7YvfdfR3tM0B58tEc57eWE9rpFe4GkvRLTXvJpny20DzHapyXtY5n2+c/a0KBt0dA2nWjbaLSNQdpWJ23zlrYdzdpgpx0Z0A5BaMc6tIMq2tEb6zCRdjxKO/ClHWHTDuVZZQa0wglaKQituIVWrsMqQKKVVNGKxFhlb7RCPlppIq3YklU+SiuIpZX4soqWaWXYtMJyVqk8rfif1s7AatCgtZywmmhobUG0RidW6xatGY3VXkdrGGS1QNKaOlltqrTGW1YrMa05mtXuzWpgp7Xks4YMsMYm0AZBsEZbsIZ10MaPsAaqsEbEsIbesMb4sAYTsUYtsYZHscZhkQZ88UaW8Yew8cfK8Qfl8Uf/kdKDnPSgv39EeE53VeD9AAAAAElFTkSuQmCC);background-repeat:no-repeat;background-size:cover;"></div>
+        <div class="ct_loading_round">
+          <div class="ct_loading_water hide ct_loading_progress" id="J_loading_progress" style="-webkit-transform:translateY(50%);">
+            <div class="ct_loading_water__cont"></div>
+          </div>
+        </div>
+        <div class="ct_loading_symbol"></div>
+      </div>
+      <div class="ct_loading_text">正在加载中...</div>
+    </div>
+		<!-- <div class="loading" id="J_loading" data-lock="1">
+      <div class="music-logo">
+        <div class="sun"></div>
+        <div class="note-cnt">
+          <div class="note"></div>
+        </div>
+        <div class="progress" id="J_percent">50%</div>
+      </div>
+		</div> -->
+    <!-- E 加载页 -->
+
+		<div class="pages" id="pages">
+      <!-- S 首页 -->
+      <div class="page p1">
+        <div class="video-poster" id="J_poster">
+          <div class="btn-begin" id="J_btn_begin"></div>
+        </div>
+        <div class="videobox" id="J_videobox">
+          <!-- <div class="poster" id="J_poster"></div> -->
+          <video class="video-box" id="J_video" x-webkit-airplay="true" webkit-playsinline="true" playsinline="true" preload="auto" src="http://img.bigbone.cn/a20161120qqmusic/video/qqmusic_new.mp4" poster="http://img.bigbone.cn/a20161120qqmusic/images/bg/poster.jpg"></video>
+        </div>
+        <div class="ending-page hide" id="J_ending">
+          <div class="share-element hide" id="J_share_ele">
+            <canvas id="J_share_stage" width="526" height="603"></canvas>
+          </div>
+          <!-- <div class="btns"></div> -->
+          <a href="http://y.qq.com/download/index.html"><div class="btn btn-music"></div></a>
+          <div class="btn btn-share" id="J_btn_share"></div>
+        </div>
+      </div>
+      <!-- E 首页 -->
+		</div>
+	</div>
+
+  <script type="text/javascript" src="http://img.bigbone.cn/a20161120qqmusic/js/lib.js"></script>
+  <script type="text/javascript" src="js/package.js"></script>
+	<script>
+		(function() {
+      var assets = [
+        'http://img.bigbone.cn/a20161120qqmusic/images/bg/poster.jpg',
+        'http://img.bigbone.cn/a20161120qqmusic/images/bg/ending2.jpg',
+        'http://img.bigbone.cn/a20161120qqmusic/images/other-s1369f2ce55.png',
+        { id: 'sprite_share', src: 'http://img.bigbone.cn/a20161120qqmusic/images/share-sac0ecef987.png' }
+      ]
+
+      window.loader = new createjs.LoadQueue(true, './')
+      loader.on('progress', handleProgress, this)
+      loader.on('complete', handleComplete, this)
+      loader.loadManifest(assets)
+
+      function handleProgress(ev) {
+        var num = 50 - parseInt(ev.progress * 50)
+        $('#J_loading_progress').removeClass('hide')
+        document.querySelector('#J_loading_progress').style['-webkit-transform'] = 'translateY(' + num + '%)'
+      }
+
+      function handleComplete() {
+        var el = document.querySelector('#J_loading')
+
+        setTimeout(function() {
+          $(el).addClass('complete')
+
+          $(el).one('webkitAnimationEnd animationEnd', function() {
+            this.parentNode.removeChild(this)
+          })
+        }, 100)
+
+        window.pageInit && window.pageInit()
+      }
+
+			// iPhone4 in WeChat
+			var cw, ch
+			if ('ontouchstart' in window) {
+				cw = Math.min(document.body.clientWidth, document.body.clientHeight)
+				ch = Math.max(document.body.clientWidth, document.body.clientHeight)
+			} else {
+				cw = 750
+				ch = document.body.clientHeight
+			}
+			if (ch/cw < 1206/750) {
+				var scale = ((ch/cw) / (1206/750)).toFixed(2),
+					el = document.createElement('style')
+				el.innerHTML = '.scale { -webkit-transform: scale(' + scale + '); transform: scale(' + scale + '); }'
+				document.querySelector('head').appendChild(el)
+			}
+		})();
+	</script>
+</body>
+</html>

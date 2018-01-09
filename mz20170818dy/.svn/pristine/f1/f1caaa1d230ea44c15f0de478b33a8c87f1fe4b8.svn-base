@@ -1,0 +1,97 @@
+//上传页
+.pageupload {
+	background: url(../images/bg_upload.jpg) no-repeat 0 0;
+	background-size: 750*@rem 1220*@rem;
+	display: none;
+	.canvasbox {
+		width: 380*@rem;
+		height: 470*@rem;
+		background: #9933ff;
+		border:2px solid #000000;
+		border-radius: 50%;
+		position: absolute;
+		left: 50%;
+		margin-left: -190*@rem;
+		top: 294*@rem;
+		canvas {
+			width: 350*@rem;
+			height: 434*@rem;
+			position: absolute;
+			left: 50%;
+			margin-left: -175*@rem;
+			top: 50%;
+			margin-top: -217*@rem;
+			border-radius: 50%;
+		}		
+		.upload_tip {
+			width: 100%;
+			// height: 300*@rem;
+			height: 100%;
+			text-align: center;
+			font-weight: bold;
+			position: absolute;
+			left: 0;
+			// top: 100*@rem;
+			.iconplus {
+				// font-size: 160*@rem;
+				// line-height: 240*@rem;
+				// color: #000;
+				// margin: 0;
+				// padding: 0;
+				left: 135*@rem;
+				top: 170*@rem;
+			}
+			.tipwords {
+				font-size: 28*@rem;
+				color: #fff;
+			}
+			.uploadfile {
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+		.turn {
+			width: 91*@rem;
+			height: 40*@rem;
+			background: url(../images/turn.png) no-repeat 0 0;
+			background-size: 91*@rem 40*@rem;
+			position: absolute;
+			left: 50%;
+			margin-left: -45*@rem;
+			bottom: 60*@rem;
+			display: none;
+		}
+	}
+	.ajust {
+		// width: 329*@rem;
+		// height: 60*@rem;
+		// background: url(../images/ajust.png) no-repeat 0 0;
+		// background-size: 329*@rem 60*@rem;
+		// position: absolute;
+		left: 213*@rem;
+		top: 780*@rem;
+	}
+	.btn_upload {
+		// width: 298*@rem;
+		// height: 114*@rem;
+		// background: url(../images/btn_upload.png) no-repeat 0 0;
+		// background-size: 298*@rem 114*@rem;
+		// position: absolute;
+		left: 240*@rem;
+		top: 855*@rem;
+	}
+	.btn_repick {
+		// width: 298*@rem;
+		// height: 114*@rem;
+		// background: url(../images/btn_repick.png) no-repeat 0 0;
+		// background-size: 298*@rem 114*@rem;
+		// position: absolute;
+		left: 240*@rem;
+		top: 976*@rem;
+		display: none;
+	}
+}

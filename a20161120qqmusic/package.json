@@ -1,0 +1,17 @@
+{
+  "name": "h5-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0"
+  },
+  "scripts": {
+    "start": "gulp watch"
+  },
+  "author": "koppt",
+  "license": "ISC"
+}

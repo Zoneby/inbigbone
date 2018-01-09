@@ -1,0 +1,131 @@
+.p1 {
+  .video-poster {
+    @include top-center;
+    margin-left: -375px;
+    background: url('http://img.bigbone.cn/a20161120qqmusic/images/bg/poster.jpg') no-repeat 0 top;
+    background-size: 100% auto;
+    width: 750px;
+    height: 100%;
+    z-index: 1000;
+
+    &.fade {
+      animation: fadeOut .2s both;
+    }
+    .btn-begin {
+      @include sprite-background($other, 'btn_begin');
+      @include bottom-center;
+      margin-left: -124px;
+      margin-bottom: 200px;
+    }
+  }
+  .videobox {
+    @include top-center;
+    margin-left: -375px;
+    // margin-left: -12.5%;
+    width: 750px;
+    height: 100%;
+    background-color: #000;
+    z-index: 100;
+    overflow: hidden;
+    display: none;
+    // display: flex;
+    justify-content: center;
+
+    &.show {
+      // display: block;
+      display: flex;
+      animation: fadeIn .2s both
+    }
+    .video-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1206px;
+      background-color: #000;
+      flex: 1;
+    }
+    .poster {
+      @include top-center;
+      margin-left: -375px;
+      width: 750px;
+      height: 100%;
+      z-index: 200;
+      background: url('http://img.bigbone.cn/a20161120qqmusic/images/bg/poster.jpg') no-repeat 0 top;
+      background-size: 100% auto
+    }
+  }
+  video {
+    font-size: 100%;
+    line-height: 0;
+    vertical-align: baseline;
+    user-select: none;
+    outline: none
+  }
+  .ending-page {
+    @include top-center;
+    margin-left: -375px;
+    background: url('http://img.bigbone.cn/a20161120qqmusic/images/bg/ending2.jpg') no-repeat 0 top;
+    background-size: 100% auto;
+    width: 750px;
+    height: 100%;
+
+    &.show {
+      animation: fadeIn .2s both;
+    }
+    .btns {
+      @include sprite-background($other, 'btns');
+      @include top-center;
+      margin-left: -266px;
+      margin-top: 850px;
+    }
+    .btn {
+      @include top-center;
+      width: 240px;
+      height: 180px;
+      margin-top: 870px;
+    }
+    .btn-music {
+      margin-left: -260px;
+    }
+    .btn-share {
+      margin-left: 50px;
+    }
+    .share-element {
+      @include top-right;
+      width: 526px;
+      height: 603px;
+
+      canvas {
+        @include top-left;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &.current {
+    .btn-begin {
+      animation: bounceIn 1s .5s both;
+    }
+  }
+
+  // iPhone 6 plus Portrait
+  @media only screen
+  and (min-device-width : 414px)
+  and (max-device-width : 736px)
+  and (orientation : portrait) {
+    .video-poster {
+      background-position: center top;
+      background-size: auto 100%;
+    }
+    .videobox .video-box {
+      height: 100%;
+      width: auto;
+    }
+    .ending-page {
+      background-position: center top;
+      background-size: auto 100%;
+    }
+  }
+}

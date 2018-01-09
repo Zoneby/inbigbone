@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>魅族</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" type="text/css" href="./styles/main.min.css">
+<script>
+!function(b,a){var c=b.documentElement;a=function(){var a=c.clientWidth;a&&(c.style.fontSize=a/375*100+"px")};window.addEventListener("orientationchange"in window?"orientationchange":"resize",a,!1);b.addEventListener("DOMContentLoaded",a,!1)}(document,window);
+</script>
+</head>
+<body>
+<div class="page loading" id="loading">
+	<div class="loadgif"></div>
+	<span class="percent" id="percent">0%</span>
+</div>
+<div class="page pageindex">
+	<div class="man"></div>
+	<a href="javascript:;" class="sp btn_look"></a>
+	<div class="sp indexface"></div>
+</div>
+<div class="page pageupload">
+	<div class="canvasbox">
+		<canvas id="photocanvas" width="350" height="434" style="background: #58179a"></canvas>
+	  <div class="upload_tip">
+      <p class="sp iconplus"></p>
+      <!-- <p class="tipwords">点击 ＋ 上传照片<br>(支持jpg、png格式图片)</p> -->
+      <input type="file" accept="image/*" id="file" class="uploadfile">
+	  </div>
+	  <div class="turn"></div>
+	  <div class="weui_toast">
+	    <div class="weui_loading">
+	      <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+	      <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+	    </div>
+	    <!-- <p class="weui_toast_content">上传中</p> -->
+	  </div>
+	</div>
+  <div class="sp ajust"></div>
+  <div class="sp btn_upload"></div>
+  <div class="sp btn_repick"></div>
+</div>
+<div class="page pageani">
+	<canvas id="anicanvas" width="750" height="1220" style="background: #000"></canvas>
+</div>
+<div class="page pagelottery">
+	<div class="productbox">
+		<div class="innerbox">
+			<img src="images/product.png">
+			<div class="sp lottery_price"></div>
+		</div>
+	</div>
+	<div class="endman m1"></div>
+	<div class="endman m2"></div>
+	<div class="endman m3"></div>
+	<div class="sp lottery_grass"></div>
+	<a href="https://sale.jd.com/act/tG5hfHOK71TYn.html" class="sp btn_link"></a>
+	<a href="javascript:;" class="sp btn_lottery"></a>
+
+	<!-- 没有抽奖资格浮层 START -->
+	<div class="wrap nochance">
+		<a href="javascript:;" class="sp btn_restart"></a>
+		<a href="javascript:;" class="sp btn_share"></a>
+		<a href="javascript:;" class="btn_delete"></a>
+		<div class="wrap sharewrap"></div>
+	</div>
+	<!-- 没有抽奖资格浮层 END -->
+
+	<!-- 有抽奖资格弹出的金蛋浮层 START -->
+	<div class="wrap chance">
+		<a href="javascript:;" class="btn_egg"></a>
+	</div>
+	<!-- 有抽奖资格弹出的金蛋浮层 END -->
+
+	<!-- 未中奖提示层 START -->
+	<div class="wrap unwin">
+		<a href="javascript:;" class="btn_delete"></a>
+		<a href="https://sale.jd.com/act/tG5hfHOK71TYn.html" class="btn_product"></a>
+	</div>
+	<!-- 未中奖提示层 END -->
+
+	<!-- 中奖页及用户信息表单提示层 START -->
+	<div class="wrap win">
+		<div class="infobox">
+			<div class="textwrap">
+				<p class="get">恭喜获得</p>
+				<p class="award_name" id="award_name">魅蓝EP蓝牙运动耳机</p>
+				<p class="addresstip">请认真填写下方的个人信息</p>
+			</div>
+			<div class="picbox">
+				<img src="">
+			</div>
+			<form>
+				<div class="infoline">
+					姓名 <input type="text" id="username" name="">
+				</div>
+				<div class="infoline">
+					电话 <input type="tel" maxlength="11" id="telephone" name="">
+				</div>
+				<div class="infoline">
+					地址 <input type="text" id="address" name="">
+				</div>
+				<a href="javascript:;" class="sp btn_submit" id="btnSubmit"></a>
+			</form>
+		</div>
+		<div class="winman"></div>
+	</div>
+	<!-- 中奖页及用户信息表单提示层 END -->
+</div>
+<audio src="media/bgm.mp3" loop autoplay></audio>
+<img src="" id="urlDataImg" style="display: none;">
+<img src="images/endman.png" style="display: none;">
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/cjs.min.js"></script>
+<script src="scripts/hammer.js"></script>
+<script src="scripts/dy.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+@import "compass/utilities/sprites";
+
+@mixin sprite-background($map, $sprite) {
+  position: absolute;
+
+  height: image-height(sprite-file($map, $sprite));
+  width: image-width(sprite-file($map, $sprite));
+
+  $x: nth(sprite-position($map, $sprite), 1);
+  $y: nth(sprite-position($map, $sprite), 2);
+
+  background: sprite-url($map) no-repeat $x $y;
+  background-size: image-width(sprite-path($map)) image-height(sprite-path($map));
+}
+
+@mixin sprite-frame($map, $sprite) {
+  $x: nth(sprite-position($map, $sprite), 1);
+  $y: nth(sprite-position($map, $sprite), 2);
+  background-position: $x $y;
+}
+
+$share: sprite-map("share/*.png", $layout: vertical);
+$other: sprite-map("other/*.png", $spacing: 4px, $layout: vertical);
