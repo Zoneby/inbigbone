@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>你过来，朕教你喂奶.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" href="css/main.css">
+<script type="text/javascript">
+if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+    var version = parseFloat(RegExp.$1)
+    if (version > 2.3) {
+        var phoneScale = parseInt(window.screen.width) / 750
+        document.write('<meta name="viewport" content="width=750,minimum-scale=' + phoneScale + ',maximum-scale=' + phoneScale + ',target-densitydpi=device-dpi">')
+    } else {
+        document.write('<meta name="viewport" content="width=750,target-densitydpi=device-dpi">')
+    }
+} else {
+    document.write('<meta name="viewport" content="width=750,user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+}
+</script>
+
+
+
+</head>
+<body>
+<div id="loading">
+    <div class="loadingbuff"></div>
+    <div id="percent" class="percent">1%</div>
+</div>
+<div class="container">
+     <div class="pages" id="pages">
+           <div class="page p1">
+
+        <div class="p1-ft1"></div>
+        <div class="p1-ft2"></div>
+        <div class="p1-ft3"></div>
+        <div class="p1-logo"></div>
+        <div  class="p1-title"></div>
+        <div  class="p1-baby"></div>
+      
+        <div class="arrow-lightSlow"></div>
+           </div>
+           <div class="page p2">     
+        <div class="arrow-light"></div>
+           </div>
+           <div class="page p3">
+       
+        <div class="arrow-light"></div>
+           </div>
+           <div class="page p4">
+      
+        <div class="arrow-light"></div>
+           </div>
+           <div class="page p5">
+     
+            <div class="arrow-light"></div>
+           </div>
+           <div class="page p6">
+           <div class="arrow-light">
+           </div>
+    </div>
+    <div class="page p7">
+        <div class="arrow-light">
+        </div>
+    </div>
+
+          <div class="page p8">
+             <div  class="p8-title"> </div>
+             <div id="photoTemp" class="photoTemp">
+                   <div id="tpSiye" class="tpSiyeG"> </div>
+                   <div id="tpNatasha" class="tpNatashaG"> </div>
+                   <div id="tpWumei" class="tpWumeiG"> </div>
+                   <div id="tpLvju" class="tpLvjuG"> </div>
+                   <div id="tpDufu" class="tpDufuG"> </div>
+                   <div id="tpSuper" class="tpSuperG"> </div>
+             </div>
+             <div class="p8-btnOk"></div>
+          </div>
+          <div  class="page p9"> 
+               <div class="indexbox">
+                   <div id="p9-selectTmp" class=""></div>
+                   <div class="p9-border">
+                          <div  class="btnUpLoad"> 
+                                <a href="javascript:;" class="makebtn">
+                                      <input id="file" type="file">
+                                </a>
+                          </div>
+                          <div  class="btnReSelect"> </div>
+                   </div>
+               </div>
+               <div class="mainbox">
+                   <div class="canvaswrap">
+                          <div class="canvasbox">
+                             <canvas id="mycanvas" width="534" height="452"></canvas>
+                             <div class="upimg"></div>
+                                         
+                          </div>
+                   </div>
+                   <div id="tmpK" ></div>
+                   <div class="p9-border">
+                   </div>
+                   <div class="scaleNotice"></div>
+                   <div class="turnR"></div>
+                    <div class="turnL"></div>
+                    <div class="moveUp"></div>
+                    <div class="moveDown"></div>
+                     <div class="moveLeft"></div>
+                    <div class="moveRight"></div>
+                         <!-- <div class="scale"></div> -->
+                    
+                    <div class="okwrap">
+                        <a href="javascript:;" class="savebtn"></a>
+                    </div>
+                    <div class="savewrap">
+                        <div class="number"></div>
+                        <a href="javascript:;" class="savebtn"></a>
+                        
+                    </div>
+                    <div class="reupload"><input type="file" id="reupload"></div>
+                </div>
+          </div>
+          <div class="page p10">
+                 <div class="doneimgwrap">
+                       <img id="doneImg" src="">
+                        <div class="p10-notice"></div>
+                       <div class="p10-btnShare"></div>
+                 </div>
+                
+          </div>
+          
+    </div>
+     <div class="shareWaps">
+        <div class="share"></div>
+    </div>
+</div>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/fabric.js"></script>
+<script src="js/hammer.js"></script>
+<!-- <script src="js/fabric.js"></script> -->
+<script src="js/main2.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+(function() {
+    var PreLoad=function(a,b){var c=b||{};this.source=a,this.count=0,this.total=a.length,this.onload=c.onload,this.prefix=c.prefix||"",this.init()};PreLoad.prototype.init=function(){var a=this;a.source.forEach(function(b){var c=b.replace(/[#\?].*$/,'').substr(b.lastIndexOf(".")+1).toLowerCase(),d=a.prefix+b;switch(c){case"js":a.script.call(a,d);break;case"css":a.stylesheet.call(a,d);break;case"svg":case"jpg":case"gif":case"png":case"jpeg":a.image.call(a,d)}})},PreLoad.prototype.getProgress=function(){return Math.round(this.count/this.total*100)},PreLoad.prototype.image=function(a){var b=document.createElement("img");this.load(b,a),b.src=a},PreLoad.prototype.stylesheet=function(a){var b=document.createElement("link");this.load(b,a),b.rel="stylesheet",b.type="text/css",b.href=a,document.head.appendChild(b)},PreLoad.prototype.script=function(a){var b=document.createElement("script");this.load(b,a),b.type="text/javascript",b.src=a,document.head.appendChild(b)},PreLoad.prototype.load=function(a,b){var c=this;a.onload=a.onerror=a.onabort=function(a){c.onload&&c.onload({count:++c.count,total:c.total,item:b,type:a.type})}};
+    
+    var resources = [
+            'images/bg1.jpg',
+            'images/baby.png',
+            'images/logo.png',
+            'images/ft1.png',
+            'images/ft2.png',
+            'images/ft3.png',
+            'images/title.png',
+            'images/page2.jpg',
+            'images/page3.jpg',
+            'images/page4.jpg',
+            'images/page5.jpg',
+            'images/page6.jpg',
+            'images/page7.jpg',
+            'images/siyeS.jpg',
+            'images/wumeiS.jpg',
+            'images/lvjuS.jpg',
+            'images/dufuS.jpg',
+            'images/natashaS.jpg',
+            'images/superS.jpg',
+            'images/p8bg.png',
+            'images/bg8.jpg',
+            'images/arrow-light.png'
+        ]
+
+    new PreLoad(resources, {
+        onload: function(load) {
+            var count = load.count,
+                total = load.total,
+                percent = Math.ceil(100 * count / total) + '',
+                htmlStr = ''
+
+            // DOM变化
+            document.querySelector('#percent').innerHTML = percent + '%'
+
+            // LOAD COMPLETE
+            if (count == total) {
+                var el = document.querySelector('#loading')
+                el.parentNode.removeChild(el)
+                //  $('#pages').html($('#tmpl').html())
+                //     $('#tmpl').remove()
+                window.pageInit && window.pageInit()
+            }
+        }
+    })
+})();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?32cc5e2af285f17e19bf54f1f6814d38";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>

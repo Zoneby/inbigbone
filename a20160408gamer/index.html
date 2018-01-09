@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+<title>做最有气质的游戏杂志</title>
+<script type="text/javascript">
+	if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+		var version = parseFloat(RegExp.$1)
+		if (version > 2.3) {
+			var phoneScale = parseInt(window.screen.width) / 640
+			document.write('<meta name="viewport" content="width=640,minimum-scale=' + phoneScale + ',maximum-scale=' + phoneScale + ',target-densitydpi=device-dpi">')
+		} else {
+			document.write('<meta name="viewport" content="width=640,target-densitydpi=device-dpi">')
+		}
+	} else {
+		document.write('<meta name="viewport" content="width=640,user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+	}
+</script>
+<link rel="stylesheet" href="ossweb-img/css/package.css">
+<link rel="stylesheet" href="ossweb-img/css/swiper.min.css">
+<link href="https://cdn.bootcss.com/animate.css/3.0.0/animate.min.css" rel="stylesheet">
+<!-- 设计：cp | 重构：cp | 创建：| 团队博客：http://tgideas.qq.com/ -->
+</head>
+<body>
+<div class="container">
+	<div class="loading" id="loading" ontouchmove="return false;">
+		<div class="words">
+			<p class="word1 ft9">“游戏大佬们的“世纪大合影”</p>
+			<!-- <p class="word2">精品战略大会胜利召开</p> -->
+			<p class="word3">不可错过的IP秀</p>
+			<p class="word4 ft7">精品战略委员会</p>
+			<p class="word5 ft9">潮物志：升级换代的只能玩物</p>
+			<p class="word6 ft9">3 2 5不可错过的IP秀</p>
+			<p class="word7">战略！巨人的进击！</p>
+			<p class="word8 ft7">现场观众表示内心澎湃</p>
+			<p class="word9">游戏大佬们的“世纪大合影”</p>
+		</div>
+		<div class="book">
+			<div class="percent" id="percent">0%</div>
+		</div>
+	</div>
+	<div class="pages" id="pages">
+	    <div class="page p1">
+	        <div class="p1_pic p1_1"></div>
+	        <div class="p1_pic p1_2"></div>
+	        <div class="p1_pic p1_3"></div>
+	        <div class="p1_pic p1_4"></div>
+	        <div class="p1_pic p1_5"></div>
+	        <div class="p1_pic eye1"></div>
+	        <div class="p1_pic p1_hand"></div>
+	        <div class="p1_pic p1_phone"></div>
+	        <div class="p1_pic p1_love"></div>
+	        <div class="p1_pic p1_ye"></div>
+	        <div class="p1_pic p1_flower"></div>
+	        <div class="p1_pic p1_star"></div>
+	        <div class="p1_pic p1_mei"></div>
+	        <div class="p1_pic p1_title"></div>
+	        <div class="arrow-light"></div>
+	    </div>
+		<div class="page p2">
+			<div class="titlebar">
+				<div class="title title_show"></div>
+			</div>
+			<div class="p1_xc"></div>
+			<div class="p1_xcdesc"></div>
+			<div id="mod_player" class="playerbox"></div>
+			<div class="filmtitle">经典IP年代秀主题视频</div>
+			<div class="pageicon">1</div>
+	        <div class="arrow-light"></div>
+		</div>
+		<div class="page p3">
+			<div class="titlebar">
+				<div class="title title_show"></div>
+			</div>
+		    <div class="swiper-container" id="imgwsiper">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide" style="background-image:url(ossweb-img/images/p3/1.jpg)"></div>
+		            <div class="swiper-slide" style="background-image:url(ossweb-img/images/p3/2.jpg)"></div>
+		            <div class="swiper-slide" style="background-image:url(ossweb-img/images/p3/3.jpg)"></div>
+		            <div class="swiper-slide" style="background-image:url(ossweb-img/images/p3/4.jpg)"></div>
+		            <div class="swiper-slide" style="background-image:url(ossweb-img/images/p3/5.jpg)"></div>
+		            <div class="swiper-slide" style="background-image:url(ossweb-img/images/p3/6.jpg)"></div>
+		            <div class="swiper-slide" style="background-image:url(ossweb-img/images/p3/7.jpg)"></div>
+		            <div class="swiper-slide" style="background-image:url(ossweb-img/images/p3/8.jpg)"></div>
+		            <div class="swiper-slide" style="background-image:url(ossweb-img/images/p3/9.jpg)"></div>
+		            <div class="swiper-slide" style="background-image:url(ossweb-img/images/p3/10.jpg)"></div>
+		            <div class="swiper-slide" style="background-image:url(ossweb-img/images/p3/11.jpg)"></div>
+		        </div>
+			</div>
+			<div class="eleother p2_mz"></div>
+			<div class="pageicon">2</div>
+	        <div class="arrow-light"></div>
+		</div>
+		<div class="page p4">
+			<div class="titlebar">
+				<div class="title title_fashion"></div>
+			</div>
+			<div class="p3_upbg">
+				<div class="p3_up_man"></div>
+			</div>
+			<div class="p3_midbg">
+				<div class="elep3 p3_leaf1"></div>
+			</div>
+			<div class="p3_downbg">
+				<div class="elep3 p3_gamebox"></div>
+				<div class="elep3 p3_shadow"></div>
+			</div>
+			<div class="pageicon">3</div>
+	        <div class="arrow-light"></div>
+		</div>
+		<div class="page p5">
+			<div class="titlebar">
+				<div class="title title_news"></div>
+			</div>
+			<div class="elep4 p4_light"></div>
+			<div class="elep4 p4_hf"></div>
+			<div class="elep4 p4_sun"></div>
+			<div class="elep4 p4_up"></div>
+			<div class="hu"></div>
+			<div class="elep4 p4_word"></div>
+			<div class="pageicon">4</div>
+	        <div class="arrow-light"></div>
+		</div>
+		<div class="page p6">
+			<div class="titlebar">
+				<div class="title title_news"></div>
+			</div>
+			<div class="eleother p5_ft"></div>
+			<div class="man p5_m1"></div>
+			<div class="man p5_m2"></div>
+			<div class="man p5_m3"></div>
+			<div class="man p5_m4"></div>
+			<div class="man p5_m5"></div>
+			<div class="de p5m1desc"></div>
+			<div class="de p5m2desc"></div>
+			<div class="de p5m3desc"></div>
+			<div class="de p5m4desc"></div>
+			<div class="de p5m5desc"></div>
+			<div class="pageicon">5</div>
+	        <div class="arrow-light"></div>
+		</div>
+		<div class="page p7">
+			<div class="titlebar">
+				<div class="title title_news"></div>
+			</div>
+			<div class="eleother p5_ft"></div>
+			<div class="man p6_m1"></div>
+			<div class="man p6_m2"></div>
+			<div class="man p6_m3"></div>
+			<div class="man p6_m4"></div>
+			<div class="man p6_m5"></div>
+			<div class="de p6m1desc"></div>
+			<div class="de p6m2desc"></div>
+			<div class="de p6m3desc"></div>
+			<div class="de p6m4desc"></div>
+			<div class="de p6m5desc"></div>
+			<div class="pageicon">6</div>
+	        <div class="arrow-light"></div>
+	        <a href="http://mp.weixin.qq.com/s?__biz=MjM5MzAxODg4MA==&mid=403236409&idx=2&sn=ea32190ebb42300c729efeb6aca3b1b7&scene=1&srcid=03257IM1dVGHyWFLzjvwiwWe#wechat_redirect" class="more">查看更多详细信息</a>
+		</div>
+		<div class="page p8">
+			<div class="titlebar">
+				<div class="title title_ad"></div>
+			</div>
+			<div class="p7_zt"></div>
+			<div class="p7_jx"></div>
+			<div class="eleother p7_logos"></div>
+			<a href="http://game.qq.com/cp/a20160119qzsy/index.html" class="p7_btn">看上一期</a>
+			<div class="pageicon">7</div>
+		</div>
+	</div>
+
+	<div class="caidanbg" ontouchmove="return false;">
+		<div class="deleteicon">X</div>
+	</div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
+<!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> -->
+<!-- <script src="http://ossweb-img.qq.com/images/js/TGMobileShare/TGMobileShare.min.js"></script> -->
+<script src="//imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2_jq.js"></script>
+<script src="ossweb-img/js/swiper.jquery.min.js"></script>
+<script src="ossweb-img/js/main.js"></script>
+<script>
+
+(function() {
+
+	var video = new tvp.VideoInfo();
+	video.setVid("p0192b6jtl8");
+	var player =new tvp.Player();
+	player.create({
+	    width:550,
+	    height:306,
+	    video:video,
+	    modId:"mod_player",
+	    pic:"ossweb-img/images/filmcover.jpg",        //视频封面地址
+	    vodFlashSkin:"http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf",  //精简皮肤        
+	    autoplay:false   //是否自动播放
+	});
+
+
+	var PreLoad=function(a,b){var c=b||{};this.source=a,this.count=0,this.total=a.length,this.onload=c.onload,this.prefix=c.prefix||"",this.init()};PreLoad.prototype.init=function(){var a=this;a.source.forEach(function(b){var c=b.replace(/[#\?].*$/,'').substr(b.lastIndexOf(".")+1).toLowerCase(),d=a.prefix+b;switch(c){case"js":a.script.call(a,d);break;case"css":a.stylesheet.call(a,d);break;case"svg":case"jpg":case"gif":case"png":case"jpeg":a.image.call(a,d)}})},PreLoad.prototype.getProgress=function(){return Math.round(this.count/this.total*100)},PreLoad.prototype.image=function(a){var b=document.createElement("img");this.load(b,a),b.src=a},PreLoad.prototype.stylesheet=function(a){var b=document.createElement("link");this.load(b,a),b.rel="stylesheet",b.type="text/css",b.href=a,document.head.appendChild(b)},PreLoad.prototype.script=function(a){var b=document.createElement("script");this.load(b,a),b.type="text/javascript",b.src=a,document.head.appendChild(b)},PreLoad.prototype.load=function(a,b){var c=this;a.onload=a.onerror=a.onabort=function(a){c.onload&&c.onload({count:++c.count,total:c.total,item:b,type:a.type})}};
+	
+	var resources = [
+		'ossweb-img/images/arrow.png',
+		'ossweb-img/images/bg1.jpg',
+		'ossweb-img/images/caidanbg.jpg',
+		'ossweb-img/images/desc.png',
+		'ossweb-img/images/eleother.png',
+		'ossweb-img/images/elep3.png',
+		'ossweb-img/images/elep4.png',
+		'ossweb-img/images/filmcover.jpg',
+		'ossweb-img/images/hu.png',
+		'ossweb-img/images/man.png',
+		'ossweb-img/images/p1_bg.png',
+		'ossweb-img/images/p1_xc.jpg',
+		'ossweb-img/images/p1_xcdesc.png',
+		'ossweb-img/images/p3_downbg.png',
+		'ossweb-img/images/p3_midbg.png',
+		'ossweb-img/images/p3_up_man.png',
+		'ossweb-img/images/p3_upbg.png',
+		'ossweb-img/images/p7_jx.png',
+		'ossweb-img/images/p7_zt.png',
+		'ossweb-img/images/page1.png',
+		'ossweb-img/images/title.png',
+		'ossweb-img/images/p3/1.jpg',
+		'ossweb-img/images/p3/2.jpg',
+		'ossweb-img/images/p3/4.jpg',
+		'ossweb-img/images/p3/5.jpg',
+		'ossweb-img/images/p3/6.jpg',
+		'ossweb-img/images/p3/7.jpg',
+		'ossweb-img/images/p3/8.jpg',
+		'ossweb-img/images/p3/9.jpg',
+		'ossweb-img/images/p3/10.jpg',
+		'ossweb-img/images/p3/11.jpg'
+		]
+
+	new PreLoad(resources, {
+		onload: function(load) {
+			var count = load.count,
+				total = load.total,
+				percent = Math.ceil(100 * count / total) + ''
+
+			// DOM变化
+			if (percent < 90) {
+				document.querySelector('#percent').innerHTML = percent + '%'
+			} else {
+				document.querySelector('#percent').innerHTML = '98%'
+			}
+
+			// LOAD COMPLETE
+			if (count == total) {
+				setTimeout(function() {
+					var el = document.querySelector('#loading')
+					el.parentNode.removeChild(el)
+					// $('#pages').html($('#tmpl').html())
+					// $('#tmpl').remove()
+					$(el).addClass('complete')
+					initMusic('ossweb-img/media/music.mp3');
+					window.pageInit && window.pageInit()
+					
+				}, 2000)
+			}
+		}
+	})
+
+	// iPhone4 in WeChat
+	var cw = Math.min(document.body.clientWidth, document.body.clientHeight),
+		ch = Math.max(document.body.clientWidth, document.body.clientHeight)
+	if (ch/cw < 1008/640) {
+		var scale = ((ch/cw) / (1008/640)).toFixed(2),
+			el = document.createElement('style');
+		el.innerHTML = '.page .scale { -webkit-transform: scale(' + scale + ') }'
+		document.querySelector('head').appendChild(el)
+	}
+})();
+
+</script>
+<!-- <script src="http://pingjs.qq.com/ping_tcss_ied.js"></script> -->
+<script type="text/javascript">
+    // if(typeof(pgvMain) == 'function');pgvMain();
+
+// TGMobileShare({
+//     shareTitle:'炸裂！你从未见过的“世纪大合影”', //不设置或设置为空时，页面有title，则调取title
+//     shareDesc:'如果游戏届也有名人堂，毫无疑问这些游戏都应该入选', //不设置或设置为空时，页面有Description，则调取Description
+//     shareImgUrl:'http://game.gtimg.cn/images/game/cp/a20160408gamer/images/share-icon.png', //分享图片尺寸200*200，且填写绝对路径
+//     shareLink:'http://game.qq.com/cp/a20160408gamer/index.html', //分享链接要跟当前页面同域名(手Q分享有这个要求) ,不设置或设置为空时，默认调取当前URL
+//     actName:'a20160408gamer'
+// });
+</script>
+</body>
+</html>
