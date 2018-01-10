@@ -1,0 +1,9 @@
+.p7 {
+  background-color: #cfcfcf;
+
+  .scene {
+    @include full-screen;
+    background: url('../img/scene-5.gif') no-repeat 0 0;
+    background-size: 100% auto;
+  }
+}

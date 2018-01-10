@@ -1,0 +1,23 @@
+.p6 {
+  background-color: #fff;
+
+  .scene {
+    @include full-screen;
+    // background: url('../img/scene-4.gif') no-repeat 0 0;
+    // background-size: 100% auto;
+
+    .bg {
+      @include full-screen;
+      width: 1758px;
+      background: url('../img/bg-s-4.png') repeat-x 0 0;
+      background-size: auto 850px;
+      animation: s-4-anim 2s linear infinite both;
+    }
+    canvas {
+      @include top-center;
+      margin-left: -200px;
+      margin-top: 250px;
+      width: 400px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.share-container {
+  z-index: 104;
+  @include full-screen;
+  background-color: rgba(0, 0, 0, .7);
+
+  &.show {
+    animation: fadeIn 1s both;
+  }
+  .share-tips {
+    @include top-right;
+    @include image-background('other/share-tips');
+    margin-top: 55px;
+    margin-right: 50px;
+  }
+}

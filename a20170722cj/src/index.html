@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>cj</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+<!-- build:less -->
+<!-- <link rel="stylesheet/less" type="text/css" href="styles/main.less">
+<script>
+  var less = {
+    env: "development",
+    async: false,
+    fileAsync: false,
+    poll: 1000,
+    functions: {},
+    dumpLineNumbers: "comments",
+    relativeUrls: false,
+    rootpath: ""
+  };
+</script>
+<script src="http://cdn.bootcss.com/less.js/1.7.0/less.min.js"></script> -->
+<link rel="stylesheet" type="text/css" href="styles/main.min.css">
+<!-- endbuild -->
+<script>
+	if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+		var version = parseFloat(RegExp.$1)
+		if (version > 2.3) {
+			var phoneScale = parseInt(window.screen.width) / 750
+			document.write('<meta name="viewport" content="width=750,minimum-scale=' + phoneScale + ',maximum-scale=' + phoneScale + ',target-densitydpi=device-dpi">')
+		} else {
+			document.write('<meta name="viewport" content="width=750,target-densitydpi=device-dpi">')
+		}
+	} else {
+		document.write('<meta name="viewport" content="width=750,user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+	}
+// !function(b,a){var c=b.documentElement;a=function(){var a=c.clientWidth;a&&(c.style.fontSize=a/375*100+"px")};window.addEventListener("orientationchange"in window?"orientationchange":"resize",a,!1);b.addEventListener("DOMContentLoaded",a,!1)}(document,window);
+</script>
+</head>
+<body style="background: #000">
+<div class="container">
+	<div class="page loading" id="loading">
+		<div class="percent" id="percent">0%</div>
+	</div>
+	<div class="page pagestart">
+		<i class="sp texttip"></i>
+		<div class="sp board">
+			<div class="canvasbox">
+				<canvas id="photoCanvas" width="560" height="650"></canvas>
+				<img src="" id="photoImg">
+			</div>
+		</div>
+		<a href="javascript:;" class="sp btn_redraw"></a>
+		<a href="javascript:;" class="sp btn_start"></a>
+	</div>
+	<div class="page pagezx">
+		<i class="zxpic"></i>
+	</div>
+	<div class="page pagemain">
+		<div class="scenebox">
+			<canvas id="sceneCanvas" width="750" height="1334"></canvas>
+		</div>
+		<div class="tipbox"></div>
+		<div class="xsbox swiper-container">
+		</div>
+	</div>
+	<div class="page pagesuc">
+		<div class="sp board">
+			<i class="sp suc_title"></i>
+			<i class="sp suc_tip"></i>
+			<a href="javascript:;" class="sp suc_btn"></a>
+		</div>
+	</div>
+	<div class="page pagekv">
+		<a href="javascript:;" class="sp kv_btn1"></a>
+		<a href="javascript:;" class="sp kv_btn2"></a>
+	</div>
+</div>
+<audio src="media/bgm.mp3" autoplay loop></audio>
+<script id="tmpl_zx1" type="text/template">
+	<div class="xs_zx1 swiper-wrapper">
+		<div class="titletip swiper-slide">找出8个原汁原味的限量特供版周边，错过血亏！</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx1_d1_hb"></i>
+			<i class="m zx1_d1_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx1_d2_hb"></i>
+			<i class="m zx1_d2_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx1_d3_hb"></i>
+			<i class="m zx1_d3_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx1_d4_hb"></i>
+			<i class="m zx1_d4_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx1_d5_hb"></i>
+			<i class="m zx1_d5_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx1_d6_hb"></i>
+			<i class="m zx1_d6_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx1_d7_hb"></i>
+			<i class="m zx1_d7_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx1_d8_hb"></i>
+			<i class="m zx1_d8_cs"></i>
+		</div>
+	</div>	
+</script>
+<script id="tmpl_zx2" type="text/template">
+	<div class="xs_zx2 swiper-wrapper">
+		<div class="titletip swiper-slide">找出8个穿着违规的人物，皮皮虾号纠察队出发啦！</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx2_d1_hb"></i>
+			<i class="m zx2_d1_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx2_d2_hb"></i>
+			<i class="m zx2_d2_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx2_d3_hb"></i>
+			<i class="m zx2_d3_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx2_d4_hb"></i>
+			<i class="m zx2_d4_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx2_d5_hb"></i>
+			<i class="m zx2_d5_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx2_d6_hb"></i>
+			<i class="m zx2_d6_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx2_d7_hb"></i>
+			<i class="m zx2_d7_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx2_d8_hb"></i>
+			<i class="m zx2_d8_cs"></i>
+		</div>
+	</div>
+</script>
+<script id="tmpl_zx3" type="text/template">
+	<div class="xs_zx3 swiper-wrapper">
+		<div class="titletip swiper-slide">找到8个“不可描述”的地点，你的女友可能就在那边</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx3_d1_hb"></i>
+			<i class="m zx3_d1_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx3_d2_hb"></i>
+			<i class="m zx3_d2_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx3_d3_hb"></i>
+			<i class="m zx3_d3_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx3_d4_hb"></i>
+			<i class="m zx3_d4_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx3_d5_hb"></i>
+			<i class="m zx3_d5_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx3_d6_hb"></i>
+			<i class="m zx3_d6_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx3_d7_hb"></i>
+			<i class="m zx3_d7_cs"></i>
+		</div>
+		<div class="findbox swiper-slide">
+			<i class="m zx3_d8_hb"></i>
+			<i class="m zx3_d8_cs"></i>
+		</div>
+	</div>
+</script>
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+<script src="scripts/swiper.min.js"></script>
+<script src="scripts/cjs.min.js"></script>
+<script src="cj.js"></script>
+<script src="scripts/elements.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/sceneControl.js"></script>
+</body>
+</html>

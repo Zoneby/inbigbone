@@ -1,0 +1,124 @@
+.md-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  z-index: 98;
+  opacity: 0;
+  transition: opacity .5s;
+
+  &.show {
+    opacity: 1;
+  }
+}
+.dialog {
+  &.show {
+    animation: fadeIn .5s both;
+  }
+  &.disappear {
+    animation: fadeOut .5s both;
+  }
+}
+
+.scene-text {
+  @include bottom-center;
+  margin-left: -350px;
+  margin-bottom: 44px;
+  display: flex;
+  width: 700px;
+  height: 230px;
+  color: #110f0d;
+  font-size: 35px;
+  line-height: 1.3;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #231815;
+  background-color: #fff;
+  box-shadow: 5px 5px 1px #575859;
+  padding: 30px;
+}
+
+.arrow-down {
+  // @include bottom-right;
+  @include image-background('other/arrow');
+  // margin-right: 80px;
+  // margin-bottom: 30px;
+  @include bottom-center;
+  margin-left: -36px;
+  margin-bottom: 60px;
+  animation: arrow-anim 1s ease-in-out alternate infinite;
+}
+
+.choice-cnt {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  z-index: 98;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  padding: 0 40px;
+  opacity: 0;
+  transition: opacity .5s;
+
+  &.show {
+    opacity: 1;
+  }
+  .choice {
+    width: 320px;
+    height: 497px;
+    background-color: #fff;
+    border: 4px solid #000;
+    position: relative;
+    transition: transform .3s;
+
+    &:active {
+      transform: scale(1.1);
+    }
+    &:nth-child(2n+1) {
+      margin-right: 30px;
+    }
+    &:nth-child(1) {
+      margin-bottom: 30px;
+    }
+    .text-cnt {
+      @include bottom-left;
+      width: 100%;
+      height: 104px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    p {
+      color: #110f0d;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    $choices: s-1-1 s-1-2 s-1-3 s-2-1 s-2-2 s-2-3 s-3-1 s-3-2 s-3-3 s-4-1 s-4-2 s-4-3 s-5-1 s-5-2 s-5-3 s-4;
+
+    .img {
+      @include top-center;
+      margin-top: 6px;
+      margin-left: -149px;
+      width: 297px;
+      height: 381px;
+
+      @each $name in $choices {
+        &.#{$name} {
+          @include image-background('choice/#{$name}');
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,51 @@
+.p8 {
+  position: relative;
+  background-color: #fff;
+  overflow: auto;
+  z-index: 98;
+  // min-height: 1230px;
+  -webkit-overflow-scrolling: touch;
+
+  canvas {
+    @include top-left;
+    position: relative;
+    width: 100%;
+  }
+  img {
+    @include top-left;
+    width: 100%;
+  }
+  p {
+    @include top-right;
+    margin-right: 60px;
+    margin-top: 190px;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .arrow-down {
+    @include bottom-center;
+    margin-left: -36px;
+    margin-bottom: 20px;
+    animation: arrow-anim 1s ease-in-out alternate infinite;
+  }
+  .creating-mask {
+    @include full-screen;
+    background-color: #d1d0d1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.fade {
+      animation: fadeOut 1s both;
+    }
+    p {
+      color: #333;
+      font-size: 32px;
+      position: initial;
+      margin-top: 0;
+      margin: 0;
+    }
+  }
+}

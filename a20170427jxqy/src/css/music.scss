@@ -1,0 +1,28 @@
+/**
+ * Audio
+ */
+.music {
+  @include top-right;
+  margin-right: 10px;
+  margin-top: 10px;
+  z-index: 101;
+  transition: transform .3s;
+
+  &.ending {
+    transform: translate3d(-30px, -120px, 0);
+  }
+  > span {
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    width: 4px;
+    height: 50px;
+    margin: -12px 0 0 -1px;
+    border-radius: 2px;
+    background-color: #fff;
+    -webkit-transform: rotate(-45deg);
+  }
+  &.playing > span {
+    visibility: hidden;
+  }
+}

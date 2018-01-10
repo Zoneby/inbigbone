@@ -1,0 +1,178 @@
+.p2 {
+  // overflow: auto;
+  // -webkit-overflow-scrolling: touch;
+
+  .arrow-down {
+    @include bottom-center;
+    margin-bottom: 20px;
+    z-index: 98;
+    opacity: 0;
+    transition: opacity .3s;
+
+    &.show {
+      opacity: 1;
+    }
+  }
+}
+.wechat {
+  // @include full-screen;
+  position: relative;
+  height: initial;
+  background-color: #fff;
+  // overflow: auto;
+  z-index: 98;
+  // min-height: 1230px;
+
+  i.emoji {
+    display: inline-block;
+    margin: 0 8px;
+
+    &.smile {
+      @include image-background('other/emoji-smile');
+    }
+    &.grin {
+      @include image-background('other/emoji-grin');
+    }
+    &.laugh {
+      @include image-background('other/emoji-laugh');
+    }
+  }
+  .wechat-banner {
+    position: relative;
+    // height: 508px;
+    height: 168px;
+    background: url('../img/wechat-banner.jpg') no-repeat 0 bottom;
+    background-size: cover;
+    transition: all 1.5s;
+
+    .avatar {
+      @include bottom-right;
+      @include image-background('other/avatar-big');
+      margin-right: 16px;
+      margin-bottom: -50px;
+    }
+  }
+  .moments-list {
+    margin-top: 104px;
+    min-height: 800px;
+  }
+  .moment {
+    display: flex;
+    padding: 32px 17px 28px 23px;
+    // border-bottom: 1px solid #dcdcdc;
+
+    .avatar {
+      @include image-background('other/avatar-small');
+      margin-right: 20px;
+    }
+    .content {
+      flex: 1;
+      font-size: 30px;
+
+      .name {
+        color: #7082a9;
+        line-height: 1.1;
+      }
+      .text {
+        color: #000;
+        line-height: 1.2;
+        margin-top: 16px;
+      }
+
+      $choices: s-1-1 s-1-2 s-1-3 s-2-1 s-2-2 s-2-3 s-3-1 s-3-2 s-3-3 s-4-1 s-4-2 s-4-3 s-5-1 s-5-2 s-5-3 s-4;
+
+      .image {
+        margin: 25px 0 20px;
+
+        @each $name in $choices {
+          &.#{$name} {
+            @include image-background('choice/#{$name}');
+          }
+        }
+      }
+
+      .image.s-1-2 {
+        position: relative;
+
+        &:after {
+          @include image-background('other/watermark');
+          @include bottom-right;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          display: inline-block;
+          content: '';
+        }
+      }
+      .location {
+        position: relative;
+        color: #5f77a8;
+        font-size: 23px;
+        line-height: 1;
+        margin-bottom: 25px;
+
+        .icon-remark {
+          @include center-right;
+          @include image-background('other/icon-remark');
+          margin-right: 8px;
+          margin-top: -14px;
+        }
+      }
+      .remarks-cnt {
+        background-color: #f3f3f5;
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          border-bottom: 10px solid #f3f3f5;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          position: absolute;
+          left: 20px;
+          top: -10px;
+        }
+      }
+      .like-list {
+        font-size: 0;
+        padding: 6px 14px 6px 24px;
+        line-height: 1.4;
+
+        .icon-like {
+          @include image-background('other/icon-like');
+          display: inline-block;
+          margin-right: 14px;
+        }
+        span {
+          color: #5f77a8;
+          font-size: 27px;
+          animation: fadeIn .2s;
+        }
+        span:not(:last-child) {
+          &:after {
+            content: '\FF0C';
+          }
+        }
+      }
+      .remarks-list {
+        font-size: 27px;
+
+        .item {
+          color: #111;
+          line-height: 1.3;
+          padding: 0px 20px 8px 24px;
+          animation: fadeIn .2s;
+
+          &:nth-child(1) {
+            padding-top: 10px;
+            border-top: 1px solid #dcdcdc;
+          }
+          .name {
+            color: #5f77a8;
+          }
+        }
+      }
+    }
+  }
+}

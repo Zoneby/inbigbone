@@ -1,0 +1,26 @@
+.p1 {
+  background-color: #d1d0d1;
+
+  .bg {
+    @include full-screen;
+    background: url('../img/bg-start.jpg') no-repeat 0 0 #d1d0d1;
+    background-size: 100% auto;
+  }
+  .btn-begin {
+    @include image-background('other/btn-begin');
+    @include top-center;
+    margin-left: -194px;
+    margin-top: 770px;
+    text-indent: -9999px;
+    animation: btn-begin-anim 1s alternate infinite;
+  }
+  .text {
+    @include top-center;
+    color: #261815;
+    font-size: 34px;
+    font-weight: bold;
+    width: 480px;
+    margin-left: -230px;
+    margin-top: 520px;
+  }
+}

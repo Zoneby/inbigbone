@@ -1,0 +1,50 @@
+.pkv {
+  @include full-screen;
+  background: url('../img/bg-kv.jpg') no-repeat 0 0;
+  background-size: 100% auto;
+
+  .text-kv {
+    @include image-background('other/text-kv');
+    @include bottom-center;
+    margin-left: -305px;
+    margin-bottom: 360px;
+  }
+  .btn {
+    text-indent: -9999px;
+  }
+  .btn-share {
+    @include image-background('other/btn-share');
+    @include bottom-center;
+    margin-left: -204px;
+    margin-bottom: 230px;
+  }
+  .btn-get {
+    @include image-background('other/btn-get');
+    @include bottom-center;
+    margin-left: -204px;
+    margin-bottom: 110px;
+  }
+  .redeem {
+    @include bottom-left;
+    margin-bottom: 130px;
+    width: 100%;
+    color: #0f3051;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+
+    span {
+      font-size: 28px;
+      user-select: initial;
+    }
+  }
+  .tips {
+    @include bottom-left;
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 0 80px;
+    color: #0f3051;
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+}

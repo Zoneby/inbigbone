@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <title>你……中毒了吗？</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no">
+  <!--<script type="text/javascript">
+    if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+      var version = parseFloat(RegExp.$1)
+      if (version > 2.3) {
+        var phoneScale = parseInt(window.screen.width) / 750
+        document.write('<meta name="viewport" content="width=750,minimum-scale=' + phoneScale + ',maximum-scale=' + phoneScale + ',target-densitydpi=device-dpi">')
+      } else {
+        document.write('<meta name="viewport" content="width=750,target-densitydpi=device-dpi">')
+      }
+    } else {
+      document.write('<meta name="viewport" content="width=750,user-scalable=no,target-densitydpi=device-dpi,minimal-ui">')
+    }
+  </script>-->
+<!-- 不要删除或改变下面这行代码 -->
+{{{__HEAD_JAVASCRIPT__}}}
+
+</head>
+
+<body>
+<!-- S pages -->
+<div class="container" id="J_container">
+
+  <!-- S Loading 页面 -->
+  <div class="loading" id="J_loading" data-lock="1">
+    <div class="flask">
+      <div class="bubble-1"></div>
+      <div class="bubble-2"></div>
+    </div>
+    <div class="progress">
+      <div class="progress__bar" id="J_percent"></div>
+      <div class="progress__ruler"></div>
+    </div>
+    <p>正在采集毒性样本 <span id="J_percent_text"></span></p>
+  </div>
+  <!-- E Loading 页面 -->
+
+  <!-- S 分享提示页 -->
+  <div class="share-container dialog show hide" id="J_share_container">
+    <div class="share-tips"></div>
+  </div>
+  <!-- E 分享提示页 -->
+
+  <!-- S 朋友圈页面 -->
+  <!--<div class="wechat hide" id="J_wechat">
+    <div class="wechat-cnt" id="J_wechat_cnt">
+      <div class="wechat-banner">
+        <div class="avatar"></div>
+      </div>
+      <ul class="moments-list" id="J_moments_list"></ul>
+    </div>
+  </div>-->
+  <!-- E 朋友圈页面 -->
+
+  <div class="md-overlay hide" id="J_overlay"></div>
+
+  <div class="pages" id="pages">
+    <div class="page p1" data-lock="1">
+      <div class="bg"></div>
+      <div class="text">通过5个情景，选择你会发什么样的朋友圈，我们就能测试出你有什么毒性。</div>
+      <div class="btn-begin" id="J_btn_begin">测毒</div>
+    </div>
+    <!-- / 首页 -->
+    <div class="page p2" data-lock="1">
+      <div class="wechat" id="J_wechat">
+        <div class="wechat-banner">
+          <div class="avatar"></div>
+        </div>
+        <ul class="moments-list" id="J_moments_list"></ul>
+      </div>
+      <div class="arrow-down"></div>
+    </div>
+    <!-- 微信页面 -->
+    <div class="page p3" data-lock="1">
+      <div class="scene"></div>
+      <div class="scene-text">长夜漫漫无心睡觉，忍不住点开了朋友圈，准备发条什么内容呢？</div>
+      <div class="arrow-down"></div>
+      <div class="choice-cnt hide" data-lock="1">
+        <div class="choice choice-1" data-choice="s-3-1">
+          <div class="img s-3-1"></div>
+          <div class="text-cnt">
+            <p>深夜放毒</p>
+          </div>
+        </div>
+        <div class="choice choice-2" data-choice="s-3-2">
+          <div class="img s-3-2"></div>
+          <div class="text-cnt">
+            <p>赢一局游戏就睡</p>
+          </div>
+        </div>
+        <div class="choice choice-3" data-choice="s-3-3">
+          <div class="img s-3-3"></div>
+          <div class="text-cnt">
+            <p>发碗鸡汤然后安睡</p>
+          </div>
+        </div>
+        <div class="choice choice-4" data-choice="s-4">
+          <div class="img s-4"></div>
+          <div class="text-cnt">
+            <p>发你妹的朋友圈</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / 睡觉 -->
+    <div class="page p4" data-lock="1">
+      <div class="scene"></div>
+      <div class="scene-text">放下工作，远离熟悉的城市，此刻站在海岛边开启久违长假的你，第一条朋友圈想说些什么？</div>
+      <div class="arrow-down"></div>
+      <div class="choice-cnt hide" data-lock="1">
+        <div class="choice choice-1" data-choice="s-1-1">
+          <div class="img s-1-1"></div>
+          <div class="text-cnt">
+            <p>你是我眼中<br>最美的风景</p>
+          </div>
+        </div>
+        <div class="choice choice-2" data-choice="s-1-2">
+          <div class="img s-1-2"></div>
+          <div class="text-cnt">
+            <p>有些风景<br>经历过才会懂</p>
+          </div>
+        </div>
+        <div class="choice choice-3" data-choice="s-1-3">
+          <div class="img s-1-3"></div>
+          <div class="text-cnt">
+            <p>在免税店，速来</p>
+          </div>
+        </div>
+        <div class="choice choice-4" data-choice="s-4">
+          <div class="img s-4"></div>
+          <div class="text-cnt">
+            <p>发你妹的朋友圈</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / 海边 -->
+    <div class="page p5" data-lock="1">
+      <div class="scene"></div>
+      <div class="scene-text">年龄虚长了这么多年，每年的生日花样都不一样。又到了一年一度的生日，你选择发什么样的内容，来庆生呢？</div>
+      <div class="arrow-down"></div>
+      <div class="choice-cnt hide" data-lock="1">
+        <div class="choice choice-1" data-choice="s-2-1">
+          <div class="img s-2-1"></div>
+          <div class="text-cnt">
+            <p>祝我生日快乐</p>
+          </div>
+        </div>
+        <div class="choice choice-2" data-choice="s-2-2">
+          <div class="img s-2-2"></div>
+          <div class="text-cnt">
+            <p>特别的生日<br>感谢各位</p>
+          </div>
+        </div>
+        <div class="choice choice-3" data-choice="s-2-3">
+          <div class="img s-2-3"></div>
+          <div class="text-cnt">
+            <p>这个礼物要上天</p>
+          </div>
+        </div>
+        <div class="choice choice-4" data-choice="s-4">
+          <div class="img s-4"></div>
+          <div class="text-cnt">
+            <p>发你妹的朋友圈</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / 聚会 -->
+    <div class="page p6" data-lock="1">
+      <div class="scene">
+        <div class="bg"></div>
+        <canvas id="J_girl" width="400" height="600"></canvas>
+      </div>
+      <div class="scene-text">阳光灿烂的周末，距离断腿只差一家店的你，休息途中会发什么样的朋友圈呢？</div>
+      <div class="arrow-down"></div>
+      <div class="choice-cnt hide" data-lock="1">
+        <div class="choice choice-1" data-choice="s-4-1">
+          <div class="img s-4-1"></div>
+          <div class="text-cnt">
+            <p>试衣间的镜子有魔力</p>
+          </div>
+        </div>
+        <div class="choice choice-2" data-choice="s-4-2">
+          <div class="img s-4-2"></div>
+          <div class="text-cnt">
+            <p>我的钱包不想说话</p>
+          </div>
+        </div>
+        <div class="choice choice-3" data-choice="s-4-3">
+          <div class="img s-4-3"></div>
+          <div class="text-cnt">
+            <p>逛街和喝咖啡更配</p>
+          </div>
+        </div>
+        <div class="choice choice-4" data-choice="s-4">
+          <div class="img s-4"></div>
+          <div class="text-cnt">
+            <p>发你妹的朋友圈</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / 购物 -->
+    <div class="page p7" data-lock="1">
+      <div class="scene"></div>
+      <div class="scene-text">这次的电影真好看，和几个小伙伴看完一部电影，你要发个怎么样的票圈呢？</div>
+      <div class="arrow-down"></div>
+      <div class="choice-cnt hide" data-lock="1">
+        <div class="choice choice-1" data-choice="s-5-1">
+          <div class="img s-5-1"></div>
+          <div class="text-cnt">
+            <p>不剧透怎么<br>对得起大家</p>
+          </div>
+        </div>
+        <div class="choice choice-2" data-choice="s-5-2">
+          <div class="img s-5-2"></div>
+          <div class="text-cnt">
+            <p>我要晒票根</p>
+          </div>
+        </div>
+        <div class="choice choice-3" data-choice="s-5-3">
+          <div class="img s-5-3"></div>
+          <div class="text-cnt">
+            <p>写个观后感吧</p>
+          </div>
+        </div>
+        <div class="choice choice-4" data-choice="s-4">
+          <div class="img s-4"></div>
+          <div class="text-cnt">
+            <p>发你妹的朋友圈</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / 电影 -->
+    <div class="page p8 result">
+      <div class="result-cnt hide" id="J_result">
+        <canvas id="J_result_stage" width="750" height="1206"></canvas>
+        <img class="hide" id="J_result_img">
+        <p>长按保存图片</p>
+        <div class="arrow-down" id="J_wechat_down"></div>
+      </div>
+      <div class="creating-mask">
+        <p>正在生成您的毒性检测报告......</p>
+      </div>
+    </div>
+    <div class="page p9 pkv" data-lock="1">
+      <div class="text-kv"></div>
+      <div class="btn btn-share" data-modal="J_share_container">不行，我要毒害好友</div>
+      <div class="btn btn-get" id="J_btn_get">点击领取限量称号</div>
+      <div class="redeem hide">兑换码：<span>DTAFHAAAANUFWFsj</span></div>
+      <div class="tips">前往剑侠情缘手游官网或游戏内微官网“CDKEY兑换”入口兑换，称号将通过邮件发放。</div>
+    </div>
+  </div>
+</div>
+<!-- E pages -->
+
+<!-- S Templates -->
+<script id="tpl-moment" type="text/html">
+  {{ each moments item idx }}
+  <li class="moment">
+    <div class="avatar"></div>
+    <div class="content">
+      <p class="name">九亿少女的噩梦</p>
+      {{ if item.content }}
+      <p class="text">{{@ item.content }}</p>
+      {{/if}}
+      <div class="image {{ item.type }}"></div>
+      <div class="location">
+        {{ if item.location }}
+        <p>{{ item.location }}</p>
+        {{ else }}
+        <p>&nbsp;</p>
+        {{/if}}
+        <i class="icon-remark"></i>
+      </div>
+      <div class="remarks-cnt">
+        {{ if item.likes }}
+        <div class="like-list" id="J_likes"></div>
+        {{/if}}
+        {{ if item.remarks }}
+        <ul class="remarks-list" id="J_remarks"></ul>
+        {{/if}}
+      </div>
+    </div>
+  </li>
+  {{/each}}
+</script>
+<!-- E Templates -->
+
+<!-- S music -->
+<!-- E music -->
+
+<!--<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+<script src="//game.gtimg.cn/images/game/act/a20170119girl/js/easy-kit.js"></script>-->
+</body>
+</html>
