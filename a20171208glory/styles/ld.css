@@ -1,0 +1,16 @@
+/* ----------------------------------------------------
+   created with http://www.codeandweb.com/texturepacker 
+   ----------------------------------------------------
+   $TexturePacker:SmartUpdate:02b9456bcf3d466572a137d5740b4b3c:8ae261e3937e5f21c04063be74fcd2dc:1543d1ef103879af5de55798c5333aba$
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(ld.png);}
+
+.btn-start {width:364px; height:112px; background-position: -2px -2px}
+.loading-circle {width:272px; height:650px; background-position: -2px -118px}

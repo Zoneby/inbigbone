@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>今晚，约不约</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" href="./styles/main.css">
+<!-- <link rel="stylesheet" href="./styles/3dview.css"> -->
+<!-- <script>
+!function(b,a){var c=b.documentElement;a=function(){var a=c.clientWidth;a&&(c.style.fontSize=a/375*100+"px")};window.addEventListener("orientationchange"in window?"orientationchange":"resize",a,!1);a()}(document,window);
+</script> -->
+<script type="text/javascript">
+if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {var version = parseFloat(RegExp.$1); if (version > 2.3) {var phoneScale = parseInt(window.screen.width) / 750; document.write('<meta name="viewport" content="width=750,minimum-scale=' + phoneScale + ',maximum-scale=' + phoneScale + ',target-densitydpi=device-dpi">'); } else {document.write('<meta name="viewport" content="width=750,target-densitydpi=device-dpi">'); } } else {document.write('<meta name="viewport" content="width=750,user-scalable=no,target-densitydpi=device-dpi,minimal-ui">'); }
+</script>
+</head>
+<body ontouchmove="return false;">
+<!-- <div class="maincontainer"> -->
+	<div class="page videobox">
+		<video id="mainvideo"  src="" x5-video-player-type="h5" playsinline webkit-playsinline></video>
+	</div>
+	<div class="page pagestart" id="loading">
+		<div class="circle">
+			<a href="javascript:;" class="btn-start"></a>
+			<span class="percent">0%</span>
+		</div>
+		<div class="loadgif"></div>
+		
+	</div>
+	<div class="page pageend">
+		<div class="logos"></div>
+		<div class="endtitle"></div>
+		<div class="endtip"></div>
+		<a href="javascript:;" class="btn-link"></a>
+		<!-- <a href="javascript:;" class="btn-share"></a> -->
+	</div>
+	<div class="page sharewrap"></div>
+  <!-- <div id="percent" style="width: 100%;height: 40px;line-height: 40px;text-align: center;font-size: 24px;color: #000;position: absolute;left: 0;top: 500px;z-index: 999">0%</div> -->
+  <!-- <div class="loading">
+    <div></div>
+  </div> -->
+
+<div id="main">
+  <div class="bg"></div>
+  <div class="three">
+    <div class="stage">
+      <div class="container">
+        <div class="panoBg"></div>
+        <div class="panoItem"></div>
+        <div class="panoSky">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+	<div class="cloudup"></div>
+	<div class="clouddown"></div>
+</div>
+<!-- </div> -->
+<div class="lockscreen" style="display: none;"><div class="turn"></div></div>
+<script>
+	var TC_CONF = {
+		// resPath: '//game.gtimg.cn/images/yxzj/ingame/matchCenter/a20171208glory/' //静态资源地址配置
+		resPath: './' //静态资源地址配置
+	}
+  var responsive = function (){
+    if ( window.orientation == 0 || window.orientation == 180 ){
+      document.querySelector('.lockscreen').style.display = 'none';
+    }else if ( window.orientation == 90 || window.orientation == -90 ){
+      document.querySelector('.lockscreen').style.display = 'block';
+    }
+  }
+  responsive();
+  window.addEventListener('orientationchange',responsive);
+</script>
+<!-- <script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script> -->
+<script src="scripts/3dview.min.js"></script>
+<script src="scripts/main.min.js"></script>
+<script src="http://img.bigbone.cn/public/mobileShare.js"></script>
+<script>
+mobileShare({
+    title: '不用票！这里直通2017年KPL秋季赛总决赛的现场！',          
+    desc: '千万别进来，不然看见你就不想走了',
+    link: '',
+    imgUrl: 'images/share-icon.jpg'
+})
+</script>
+<!-- 统计与分享
+<script src="//ossweb-img.qq.com/images/js/TGMobileShare/TGMobileShare.min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+
+<script type="text/javascript">
+    //此段代码不能放到外链JS中，
+    var setSite={ //设置网站属性
+     siteType:"a20171208glory", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+     pageType:"index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+     pageName:"首页", //必填项:页面中文名
+     osact:0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+     ingame:0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+     stayTime:1 //选填项:是否需要统计停留时长boolean；默认是1
+    }
+    if(typeof(pgvMain)=='function')pgvMain();//千万不能忘记！
+    TGMobileShare({
+        shareTitle:'不用票！这里直通2017年KPL秋季赛总决赛的现场！', //不设置或设置为空时，页面有title，则调取title
+        shareDesc:"千万别进来，不然看见你就不想走了", //不设置或设置为空时，页面有Description，则调取Description
+        shareImgUrl:'https://game.gtimg.cn/images/yxzj/ingame/matchCenter/a20171208glory/images/share-icon.jpg', //分享图片尺寸200*200，且填写绝对路径
+        shareLink:location.href.split('?')[0]+'?_wv=1025', //分享链接要跟当前页面同域名(手Q分享有这个要求) ,不设置或设置为空时，默认调取当前URLs
+        actName:'a20171208glory'
+    });
+</script> -->
+</body>
+</html>
