@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <script>
+    ! function (n, e) {
+      var t = n.documentElement,
+        i = "orientationchange" in window ? "orientationchange" : "resize",
+        d = function () {
+          var n = t.clientWidth;
+          if (n) {
+            var e = 100 * (n / 375);
+            e > 200 && (e = 200), t.style.fontSize = e + "px"
+          }
+        };
+      n.addEventListener && (e.addEventListener(i, d, !1), n.addEventListener("DOMContentLoaded", d, !1));
+      d();
+    }(document, window);
+    </script>
+    <link rel="stylesheet" href="ossweb-img/css/index.css">
+    <title>绿野鸡踪</title>
+  </head>
+  <style>
+    .kv-btn {
+      bottom: auto;
+      top: 5.06rem;
+      display: none;
+    }
+    .error .kv-btn,.active .kv-btn {
+      display: block;
+    }
+  </style>
+  <body>
+  <div id="loading" class="loading">
+    <div class="loading-progress">
+      <i id="progressBar" class="loading-progress-bar"></i>
+    </div>
+    <div class="loading-doll">距离抵达战场还有<span id="doll">10</span>秒，你的队友与你整装待发！</div>
+  </div>
+  <i id="music" class="music music__off" data-status="off"></i>
+  <audio id="audio" class="audio hide" loop autoplay preload="auto"></audio>
+  <audio id="audio2" class="audio hide" preload="auto"></audio>
+  <div id="wrapper" class="container">
+    <div class="page">
+      <ul class="page-bg">
+        <li class="page-bg-0">
+          <i class="airplane"></i>
+          <i class="people people-1"></i>
+          <i class="people people-2"></i>
+          <i class="people people-3"></i>
+          <i id="windows1" class="windows windows-1"></i>
+          <i id="windows2" class="windows windows-2"></i>
+          <i id="windows3" class="windows windows-3"></i>
+          <div id="guide2" class="guide"></div>
+          <div id="tips" class="tips">
+            <p>你的队友落地成盒了！</p>
+            <p>属于你的挑战即将开始！</p>
+          </div>
+        </li>
+        <li class="page-bg-1">
+          <i class="page-anit page-anit-1"></i>
+        </li>
+        <li class="page-bg-2">
+          <i class="page-anit page-anit-2"></i>
+        </li>
+        <li class="page-bg-3"></li>
+        <li class="page-bg-4">
+          <i class="page-anit page-anit-3"></i>
+        </li>
+        <li class="page-bg-5"></li>
+        <li class="page-bg-6">
+          <i class="page-anit page-anit-4"></i>
+          <i class="page-anit page-anit-5"></i>
+        </li>
+        <li class="page-bg-7">
+          <i class="page-anit page-anit-6"></i>
+        </li>
+        <li class="page-bg-8">
+          <i class="page-anit page-anit-7"></i>
+        </li>
+        <li class="page-bg-9">
+          <i class="page-anit page-anit-8"></i>
+        </li>
+        <li class="page-bg-10"></li>
+        <li class="page-bg-11">
+          <i class="page-anit page-anit-9"></i>
+        </li>
+        <li class="page-bg-12"></li>
+        <li class="page-bg-13">
+          <i class="page-anit page-anit-10"></i>
+        </li>
+        <li class="page-bg-14">
+          <i class="page-anit page-anit-11"></i>
+        </li>
+        <li class="page-bg-15"></li>
+        <li class="page-bg-16">
+          <i class="page-anit page-anit-12"></i>
+        </li>
+        <li class="page-bg-17"></li>
+        <li class="page-bg-18">
+          <i class="page-anit page-anit-13"></i>
+          <i class="page-anit page-anit-14"></i>
+        </li>
+        <li class="page-bg-19"></li>
+        <li class="page-bg-20">
+          <i class="page-anit page-anit-15"></i>
+        </li>
+      </ul>
+      <div class="page-question page-question-1">
+        <i class="title"></i>
+        <a href="javascript:void(0);" data-value="1" class="btn btn-1">真的猛男，举起双拳就可以上了！</a>
+        <a href="javascript:void(0);" data-value="2" class="btn btn-1">脚底抹油，赶紧逃跑！</a>
+      </div>
+      <div class="page-question page-question-2">
+        <i class="title"></i>
+        <a href="javascript:void(0);" data-value="1" class="btn btn-1">煎炸蒸炒，厨神在手！</a>
+        <a href="javascript:void(0);" data-value="2" class="btn btn-2">
+          <p>近能拍头，远可护菊，</p>
+          <p>它能逆天改命！</p>
+        </a>
+      </div>
+      <div class="page-question page-question-3">
+        <i class="title"></i>
+        <a href="javascript:void(0);" data-value="1" class="btn btn-1 grenade-1">圆圆的绿胖子</a>
+        <a href="javascript:void(0);" data-value="2" class="btn btn-1 grenade-2">直直的绿瘦子</a>
+      </div>
+      <div class="page-question page-question-4">
+        <i class="title"></i>
+        <a href="javascript:void(0);" data-value="1" class="btn btn-1">“另一半”，这是对TA的爱称</a>
+        <a href="javascript:void(0);" data-value="2" class="btn btn-1">“老一辈”，对经验丰富玩家的尊称</a>
+        <a href="javascript:void(0);" data-value="3" class="btn btn-2">
+          <p>“李元霸”，指对手或队友好厉害，战</p>
+          <p>无不胜</p>
+        </a>
+        <a href="javascript:void(0);" data-value="4" class="btn btn-1">“老阴B”，指躲在角落的玩家</a>
+      </div>
+      <div class="page-question page-question-5">
+        <i class="title"></i>
+        <a href="javascript:void(0);" data-value="1" class="btn btn-1">路遇打劫，装备全送</a>
+        <a href="javascript:void(0);" data-value="2" class="btn btn-1">汽车上桥速度会变快</a>
+        <a href="javascript:void(0);" data-value="3" class="btn btn-1">桥上经常可以捡到包包</a>
+        <a href="javascript:void(0);" data-value="4" class="btn btn-2">
+          <p>上桥以后你会获得</p>
+          <p>顺X快递的主题皮肤</p>
+        </a>
+      </div>
+      <div class="page-question page-question-6">
+        <i class="title"></i>
+        <a href="javascript:void(0);" data-value="1" class="btn btn-2">
+          <p>坦克？这游戏哪能开坦克，</p>
+          <p>我念书少别骗我！</p>
+        </a>
+        <a href="javascript:void(0);" data-value="2" class="btn btn-2">
+          <p>那个灌木丛长的很像</p>
+          <p>红警里面的幻影坦克！</p>
+        </a>
+        <a href="javascript:void(0);" data-value="3" class="btn btn-1">我的坦克只有在草地里才能完美隐藏</a>
+        <a href="javascript:void(0);" data-value="4" class="btn btn-1">幻影是看不见的，在树上！</a>
+      </div>
+      <div class="page-question page-question-7">
+        <i class="title"></i>
+        <a href="javascript:void(0);" data-value="1" class="btn btn-1">起手快瞄准简单的手枪</a>
+        <a href="javascript:void(0);" data-value="2" class="btn btn-1">一发入魂的狙击枪</a>
+        <a href="javascript:void(0);" data-value="3" class="btn btn-1">一喷成神的霰弹枪</a>
+        <a href="javascript:void(0);" data-value="4" class="btn btn-1">突突突标配的步枪</a>
+      </div>
+      <div class="page-question page-question-8">
+        <i class="title"></i>
+        <a href="javascript:void(0);" data-value="1" class="btn btn-1">我家的1级包又小又低调</a>
+        <a href="javascript:void(0);" data-value="2" class="btn btn-1">原谅色的2级包完美与草丛融为一体</a>
+        <a href="javascript:void(0);" data-value="3" class="btn btn-1">低调的3级包让我看上去像一个石头</a>
+        <a href="javascript:void(0);" data-value="4" class="btn btn-1">什么都不背</a>
+      </div>
+      <div class="page-question page-question-9">
+        <i class="title"></i>
+        <a href="javascript:void(0);" data-value="1" class="btn btn-3">石头</a>
+        <a href="javascript:void(0);" data-value="2" class="btn btn-3">窗户</a>
+        <a href="javascript:void(0);" data-value="3" class="btn btn-3">围墙</a>
+        <a href="javascript:void(0);" data-value="4" class="btn btn-3">门</a>
+        <a href="javascript:void(0);" data-value="5" class="btn btn-3">树</a>
+        <a href="javascript:void(0);" data-value="6" class="btn btn-3">空投箱子</a>
+        <a href="javascript:void(0);" data-value="7" class="btn btn-3">围栏</a>
+        <a href="javascript:void(0);" class="btn btn-4"></a>
+      </div>
+      <div class="page-question page-question-10" style="top:128.665rem">
+        <i class="title"></i>
+        <a href="javascript:void(0);" data-value="1" class="btn btn-1">把她赶走，有吃鸡没女友</a>
+        <a href="javascript:void(0);" data-value="2" class="btn btn-1">让她先看自己玩，菜鸡不要害死我</a>
+        <a href="javascript:void(0);" data-value="3" class="btn btn-1">多买一台超高配置的电脑</a>
+        <a href="javascript:void(0);" data-value="4" class="btn btn-2">
+          <p>带女友玩最火的</p>
+          <p>吃鸡手游《全军出击》啊！</p>
+        </a>
+      </div>
+    </div>
+    <div id="guide" class="container-guide"></div>
+  </div>
+  <div id="mask" class="mask"></div>
+  <div id="ribbon" class="ribbon"></div>
+  <div id="kv" class="kv">
+    <i id="chicken" class="kv-chicken"></i>
+    <img id="desc" src="ossweb-img/img/desc/bg-desc-6.png" alt="" class="kv-desc">
+    <img id="text" src="ossweb-img/img/text/bg-text-6.png" alt="" class="kv-text">
+    <i class="kv-cloud kv-cloud-1"></i>
+    <i class="kv-cloud kv-cloud-2"></i>
+    <p class="kv-tips">长按可保存图片</p>
+    <img id="sharePic" src="" alt="" class="kv-share">
+    <a id="reset" href="javascript:void(0);" class="kv-btn kv-btn-1"></a>
+    <a id="subscribe" href="javascript:void(0);" class="kv-btn kv-btn-2"></a>
+  </div>
+  </body>
+  <script src="ossweb-img/js/motion.js"></script>
+  <!-- <script src="//game.gtimg.cn/images/js/su/TGLogin.min.js"></script>
+  <script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+  <script src="//ossweb-img.qq.com/images/js/TGMobileShare/TGMobileShare.min.js"></script> -->
+  <script>
+  //此段代码不能放到外链JS中
+  var setSite = { //设置网站属性
+    siteType: "a20171220pubgm", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+    pageType: "index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+    pageName: "首页", //必填项:页面中文名
+    osact: 0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+    ingame: 0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+    stayTime: 1 //选填项:是否需要统计停留时长boolean；默认是1
+  };
+  //点击流统计
+  // if (typeof (pgvMain) == 'function') pgvMain();
+  </script>
+  <script src="ossweb-img/js/iscroll-probe.js"></script>
+  <script src="ossweb-img/js/index.js"></script>
+
+</html>
