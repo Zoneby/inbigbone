@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>叮一下会发生什么</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" type="text/css" href="./styles/main.min.css">
+<script>
+!function(b,a){var c=b.documentElement;a=function(){var a=c.clientWidth;a&&(c.style.fontSize=a/375*100+"px")};window.addEventListener("orientationchange"in window?"orientationchange":"resize",a,!1);b.addEventListener("DOMContentLoaded",a,!1)}(document,window);
+</script>
+
+</head>
+<body>
+<div class="container">
+	<div class="page pagestart">
+		<div class="sp p0-time">2002.07</div>
+		<!-- <div class="p0-border group-select"></div> -->
+		<div class="sp p0-huan group-select"></div>
+		<div class="selectbox wrap group-select">
+			<div class="sp p0-logo"></div>
+			<div class="sp p0-circle">
+				<div class="sp selected-img icon_1"></div>
+			</div>
+			<div class="sp btn-select"></div>
+			<!-- <div class="testwrap">
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li>10</li>
+					<li>11</li>
+					<li>12</li>
+					<li>13</li>
+					<li>14</li>
+					<li>15</li>
+					<li>16</li>
+					<li>17</li>
+					<li>18</li>
+					<li>19</li>
+					<li>20</li>
+				</ul>
+			</div> -->
+		</div>
+		<div class="sp loadtext">
+			<div class="dot"><i>.</i><i>.</i><i>.</i><i>.</i><i>.</i><i>.</i></div>
+		</div>
+	</div>
+	<div class="page canvasbox">
+		<canvas id="canvas" width="750" height="1220"></canvas>
+		<div class="sp btn-other"></div>
+		<div class="sp btn-dafa"></div>
+		<div class="sp btn-download"></div>
+		<div class="sp btn-share"></div>
+		<div class="relook">重播</div>
+		<div class="back">返回</div>
+	</div>
+	<div class="music on"></div>
+	<div class="page sharewrap">
+		<div class="sp sharetip"></div>
+	</div>
+</div>
+<script src="scripts/lib/jquery.min.js"></script>
+<script src="scripts/lib/cjs.min.js"></script>
+<script src="scripts/main.js"></script>
+
+<!-- 统计与分享
+<script src="//ossweb-img.qq.com/images/js/TGMobileShare/TGMobileShare.min.js"></script>
+<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+
+<script type="text/javascript">
+		var shareList = [
+			'听说“叮”一声之后，代表奇迹将会出现',
+			'我曾以为，奇迹出现了！',
+			'我，以为我觉醒了',
+			'奇迹出现，我满血复活了！',
+			'惊喜打宝，犹如一场梦',
+			'只要有叮，失态何妨',
+			'奇迹出现时，我总会失控',
+			'一听到叮，下意识就摸刀',
+			'叮 公平打宝，自由交易'
+		]
+		var shareText = shareList[parseInt(Math.random()*shareList.length)];
+		console.log(shareText)
+    //此段代码不能放到外链JS中，
+    var setSite={ //设置网站属性
+     siteType:"a20171020qjjx", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+     pageType:"index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+     pageName:"首页", //必填项:页面中文名
+     osact:0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+     ingame:1, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
+     stayTime:1 //选填项:是否需要统计停留时长boolean；默认是1
+    }
+    if(typeof(pgvMain)=='function')pgvMain();//千万不能忘记！
+    TGMobileShare({
+        shareTitle:'叮一下会发生什么', //不设置或设置为空时，页面有title，则调取title
+        shareDesc:shareText, //不设置或设置为空时，页面有Description，则调取Description
+        timelineTitle:shareText,
+        shareImgUrl:'https://game.gtimg.cn/images/game/act/a20171020qjjx/images/share-icon.jpg', //分享图片尺寸200*200，且填写绝对路径
+        shareLink:'', //分享链接要跟当前页面同域名(手Q分享有这个要求) ,不设置或设置为空时，默认调取当前URLs
+        actName:'a20171020qjjx'
+    });
+</script> -->
+</body>
+</html>

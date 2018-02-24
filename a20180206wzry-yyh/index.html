@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>杨玉环的视频邀请</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="./ossweb-img/styles/main.css">
+</head>
+<script>
+!function(b,a) {
+	var c=b.documentElement;
+	a = function() {
+		var a = c.clientWidth;
+		a && (c.style.fontSize = a/ 375 * 100+"px")
+	};
+	window.addEventListener("orientationchange" in window ? "orientationchange" : "resize", a, !1);
+	b.addEventListener("DOMContentLoaded", a, !1)
+	a()
+}(document, window)
+</script>
+<body ontouchmove="return false;">
+	<audio src="./media/login-bgm.mp3" loop id="login-bgm"></audio>
+	<audio src="./media/bgm.mp3" loop id="bgm"></audio>
+	<audio src="./media/wx-msg.mp3" id="wx-bgm"></audio>
+	<audio src="./media/bless.mp3" id="bless"></audio>
+	<audio src="./media/wx-come.mp3" loop id="wx-come"></audio>
+	<audio src="./media/wx-to.mp3" id="wx-to"></audio>
+
+	<div class="container" style="display: block;">
+		<div class="videobox">
+			<video src="" class="mainvideo" playsinline webkit-playsinline id="mainvideo"></video>
+		</div>
+	</div>
+
+	<div class="page pagestart" style="display: block;">
+		<div class="btn start-btn"></div>
+		
+		</div>
+	</div>
+	<div class="page pagedialog" style="display: none;">
+		
+		<div class="wx-dialog"></div>
+		<div class="tips"></div>
+	</div>
+	<!-- <div class="wx-dialog" style="display: none;"> -->
+
+	<div class="page pagewx wx1" style="display: none;">
+		<div class="pagewx-bg"></div>
+		<div class="content-part clearfix">
+			<div class="dialog d-l d1">
+				<img src="./ossweb-img/images/yyh-tx.png" alt="" class="yyh-tx">
+				<div class="t-l clearfix">
+					
+					<div class="t-y-content">
+						<p class="t-1">在做什么呢?</p>
+					</div>
+				</div>
+			</div>
+			<div class="dialog d-r d2">
+				<img src="./ossweb-img/images/user-tx.png" alt="" class="user-tx">
+				<div class="t-r t2-box-r clearfix">
+					<div class="t-u-content">
+						<p class="t-2">准备玩游戏呀，你是杨玉环？！</p>
+					</div>
+				</div>
+			</div>
+			<div class="dialog d-l d3">
+				<img src="./ossweb-img/images/yyh-tx.png" alt="" class="yyh-tx">
+				<div class="t-l t1-box-l  clearfix">
+					
+					<div class="t-y-content">
+						<p class="t-1">嗯呢， 我是峡谷里的杨玉环噢～</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="dialog d-r d4">
+				<img src="./ossweb-img/images/user-tx.png" alt="" class="user-tx">
+				<div class="t-r t2-box-r  clearfix">
+					
+					<div class="t-u-content">
+						<p class="t-2">哇塞～</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="page page2video" style="display: none;">
+		<div class="btn accept-v-btn"></div>
+		<div class="tips"></div>
+	</div>
+	<div class="paeg page-move-pipa" style="display: none;">
+		<div class="pipa" id="pipa"></div>
+		<!-- <div class="wx-video"></div> -->
+		<div class="pipa-mov-tips"></div>
+		<div class="pipa-tips"></div>
+	</div>
+
+	<div class="page pagewx wx2" style="display: none;">
+		<div class="pagewx-bg"></div>
+		<div class="content-part clearfix">
+			<div class="dialog d-l d5">
+				<img src="./ossweb-img/images/yyh-tx.png" alt="" class="yyh-tx">
+				<div class="t-l clearfix">
+					<div class="t-y-content">
+						<p class="t-1">刚才那首曲子，你听懂了么？</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="dialog d-r d6">
+				<img src="./ossweb-img/images/user-tx.png" alt="" class="user-tx">
+				<div class="t-r t2-box-r clearfix">
+					<div class="t-u-content">
+						<p class="t-2">唔...有一些淡淡的情愫... 是因为过两天的节日吗？情人节好像快到了</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="dialog d-l d7">
+				<img src="./ossweb-img/images/yyh-tx.png" alt="" class="yyh-tx">
+				<div class="t-l clearfix">
+					<div class="t-y-content">                
+						<p class="t-1">节日是快到了，那...我有一句话想跟你说...</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="dialog d-r d8">
+				<img src="./ossweb-img/images/user-tx.png" alt="" class="user-tx">
+				<div class="t-r t2-box-r clearfix">
+					<div class="t-u-content">
+						<p class="t-2">嗯嗯， 你说～</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="dialog d-l d9">
+				<img src="./ossweb-img/images/yyh-tx.png" alt="" class="yyh-tx">
+				<div class="t-l clearfix">
+					<div class="t-y-content">
+						<p class="t-1">这句话， 我想语音告诉你～</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="dialog d-l d10" id="d10v1"> 
+				<img src="./ossweb-img/images/yyh-tx.png" alt="" class="yyh-tx">
+				<div class="t-l clearfix">
+					<div class="t-y-content">
+						<p class="t-1">新的一年就要到了，新春快乐～！</p>
+					</div>
+				</div>
+			</div> -->
+			<div class="dialog d-l d10" id="d10v2"> 
+				<img src="./ossweb-img/images/yyh-tx.png" alt="" class="yyh-tx">
+				<div class="t-l clearfix">
+					<div class="t-y-content">
+						<div class="icon icon1"></div>
+						<div class="icon icon2"></div>
+						<div class="icon icon3"></div>
+					</div>
+				</div>
+				<div class="red-icon"></div>
+				<div class="number">5''</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="page-result" style="display: none;">
+		<canvas class="hidden-canvas" id="hiddenCanvas" width="750" height="1448"></canvas>
+		<img src="" alt="" class="result-image" id="resultImage">
+		<p class="saveshare-tips">长按保存图片<br>识别二维码得到新春祝福</p>
+		<!-- <p class="">长识别二维码得到新春祝福？</p> -->
+	</div>
+
+<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+<script src="http://www.bigbone.cn/mobileShare.js"></script>
+<script src="./ossweb-img/scripts/cjs.min.js"></script>
+<script src="./ossweb-img/scripts/main.js"></script>
+
+
+
+<script>
+	mobileShare({
+    title: '我刚才收到了杨玉环给我的祝福！这个春节一定旺！',
+    desc: '杨玉环向你发起视频邀请',
+    timelineTitle:'我刚才收到了杨玉环给我的祝福！这个春节一定旺！',
+    imgUrl: './ossweb-img/images/share-icon.png'
+});
+</script>
+</body>
+</html>
