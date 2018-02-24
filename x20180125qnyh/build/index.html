@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新倩女幽魂·萌妖送福</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+<!-- <script>
+!function(b,a){var c=b.documentElement;a=function(){var a=c.clientWidth;a&&(c.style.fontSize=100+"px")};window.addEventListener("orientationchange"in window?"orientationchange":"resize",a,!1);a()}(document,window);
+</script> -->
+<link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+<div class="container">
+	<div class="page canvasbox" ontouchmove="return false">
+		<canvas id="canvas" width="750" height="1334"></canvas>
+	</div>
+	<div id="wrapper" ontouchmove="return false">
+		<div id="scroller">
+    </div>
+	</div>
+  <div class="s6_btn"></div>
+  <div class="page stopmask" ontouchmove="return false"></div>
+  <div class="page inputpage" ontouchmove="return false">
+    <div class="namebox">
+      <input id="userName" maxlength="5" type="text" placeholder="输入你的名字(5字以内)">
+    </div>
+    <div class="btn_open"><div class="sp boy"></div></div>
+    <div class="waitwrap">
+      <div class="loadtip">
+        <div class="loadgif"></div>
+        祝福生成中
+      </div>
+    </div>
+  </div>
+  <div class="page resultpage" data-type="1" ontouchmove="return false">
+    <img src="" id="saveImage" class="result_image">
+    <div class="btn_save">保存</div>
+    <div class="btn_share">传递祝福</div>
+  </div>
+  <div class="page savewrap"><div class="savetip"></div></div>
+  <div class="page sharewrap"><div class="sharetip"></div><div class="sp shareboy"></div></dir></div>
+</div>
+<div class="loadgif" id="loadgif"></div>
+<audio id="bgm" src="media/bgm.mp3" loop autoplay></audio>
+<audio id="bird" src="media/bird.mp3"></audio>
+<audio id="boat" src="media/boat.mp3"></audio>
+<audio id="fengling" src="media/fengling.mp3"></audio>
+<audio id="night" src="media/night.mp3"></audio>
+<audio id="wind" src="media/wind.mp3"></audio>
+<audio id="wuba" src="media/wuba.mp3"></audio>
+<audio id="wuba2" src="media/wuba2.mp3"></audio>
+<script>
+
+//网易相关配置
+var NETEASE_CONf = {
+  resPath: './',//静态资源分离根路径
+  rootPath: 'http://bigbone.cn/x20180125qnyh/build/',//html文件根路径，分享设置时使用
+}
+
+function query(selector){
+  return document.querySelector(selector);
+}
+var $bgm = query('#bgm'),
+$bird = query('#bird'),
+$boat = query('#boat'),
+$fengling = query('#fengling'),
+$night = query('#night'),
+$wind = query('#wind'),
+$wuba = query('#wuba'),
+$wuba2 = query('#wuba2');
+
+//其他js执行之前执行
+;(function (){
+  function responsive(){
+    var zoom = document.body.clientWidth/750;
+    document.querySelector('.container').style.zoom = zoom>1?1:zoom;
+  }
+  responsive();
+  window.addEventListener('orientationchange',responsive);
+  document.addEventListener("WeixinJSBridgeReady", function () {
+    $bgm.play();
+    $bird.play();
+    $bird.pause();
+    $boat.play();
+    $boat.pause();
+    $fengling.play();
+    $fengling.pause();
+    $night.play();
+    $night.pause();
+    $wind.play();
+    $wind.pause();
+    $wuba.play();
+    $wuba.pause();
+    $wuba2.play();
+    $wuba2.pause();
+  }, false);
+})();
+
+</script>
+<!-- <script src="scripts/jquery.min.js"></script> -->
+<!-- <script charset="gb2312" data-fixed="true" src="http://res.nie.netease.com/comm/js/zepto(mixNIE).last.js"></script> -->
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<script src="scripts/fx.js"></script>
+
+<script src="scripts/cjs.min.js"></script>
+<script src="scripts/iscroll-probe.min.js"></script>
+<script src="scripts/qnyh.js"></script>
+<script src="scripts/elements.js"></script>
+<script src="scripts/main.js"></script>
+<script src="http://bigbone.cn/public/mobileShare.js"></script>
+<script>
+var sharelist = [
+  {title:"我可能玩了假游戏，倩女新年送我这个祝福？",desc:"这是什么操作？打开后居然萌了我一脸？！"},
+  {title:"有人能帮我翻译一下妖语吗？胡巴说了什么……",desc:"我出1000元宝，谁来帮帮我！"},
+  {title:"有人和我一起养胡巴吗？在线等，急",desc:"育儿宝典，进口奶粉，了解一下~"}
+]
+var shareText = sharelist[Math.floor(Math.random()*sharelist.length)];
+var shareData = {
+  title: shareText.title,
+  desc: shareText.desc,
+  // timelineTitle: shareDesc,
+  imgUrl: 'images/share-icon.jpg'
+}
+mobileShare(shareData)
+</script>
+</body>
+</html>

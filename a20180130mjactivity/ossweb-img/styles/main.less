@@ -1,0 +1,239 @@
+@rem: 0.01*0.5rem;
+html, body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-user-select: none;
+	user-select: none;
+	overflow: hidden;
+	background-color: #1c8590;
+}
+div, i, a, p {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.container {
+	width: 750*@rem;
+	height: 1220*@rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -375*@rem;
+	margin-top: -610*@rem;
+	overflow: hidden;
+	background: url(../images/bg.jpg) no-repeat;
+	background-size: 750*@rem 1220*@rem;
+
+	.download-btn {
+		width: 429*@rem;
+		height: 136*@rem;
+		background: url(../images/download-btn.png) no-repeat;
+		background-size: 429*@rem 136*@rem;
+		margin: 0 auto;
+		margin-top: 920*@rem;
+		-webkit-animation: btn 1.4s linear infinite alternate both;
+	}
+
+	.cloud-left {
+		width: 159*@rem;
+		height: 86*@rem;
+		background: url(../images/cloud-left.png) no-repeat;
+		background-size: 159*@rem 86*@rem;
+		position: absolute;
+		left: 0;
+		top: 240*@rem;
+		-webkit-animation: cloud-left 1s linear infinite alternate both;
+	}
+	.cloud-right {
+		width: 106*@rem;
+		height: 64*@rem;
+		background: url(../images/cloud-right.png) no-repeat;
+		background-size: 106*@rem 64*@rem;
+		position: absolute;
+		right: 30*@rem;
+		top: 464*@rem;
+		-webkit-animation: cloud-right 1s linear infinite alternate both;
+	}
+	.coin1 {
+		width: 60*@rem;
+		height: 63*@rem;
+		background: url(../images/coin1.png) no-repeat;
+		background-size: 60*@rem 63*@rem;
+		
+	}
+	.coin2 {
+		width: 33*@rem;
+		height: 35*@rem;
+		background: url(../images/coin2.png) no-repeat;
+		background-size: 33*@rem 35*@rem;
+	}
+
+	.c1 {
+		position: absolute;
+		left: 538*@rem;
+		top: 130*@rem;
+		// -webkit-animation: coin1 1s linear .2s infinite both;
+	}
+	.c2 {
+		position: absolute;
+		left: 578*@rem;
+		top: 330*@rem;
+		// -webkit-animation: coin1 1s linear .5s infinite  both;
+	}
+	.c3 {
+		position: absolute;
+		right: 668*@rem;
+		top: 130*@rem;
+		-webkit-animation: coin1 1s linear  .6s infinite  both;
+	}
+	.c4 {
+		position: absolute;
+		right: 688*@rem;
+		top: 430*@rem;
+		-webkit-animation: coin1 1s linear  .3s  infinite both;
+	}
+
+	.c5 {
+		position: absolute;
+		right: 618*@rem;
+		top: 730*@rem;
+		-webkit-animation: coin1 1s  linear .9s  infinite  both;
+	}
+	.c6 {
+		position: absolute;
+		left: 688*@rem;
+		top: 830*@rem;
+		-webkit-animation: coin1 1s linear .8s infinite both;
+	}
+	.mj1 {
+		width: 65*@rem;
+		height: 81*@rem;
+		background: url(../images/mj1.png) no-repeat;
+		background-size: 65*@rem 81*@rem;
+		position: absolute;
+		left: 650*@rem;
+		top: 190*@rem;
+		-webkit-animation: mj1 1s linear infinite alternate both;
+	}
+	.mj2 {
+		width: 74*@rem;
+		height: 89*@rem;
+		background: url(../images/mj2.png) no-repeat;
+		background-size: 74*@rem 89*@rem;
+		position: absolute;
+		left: 30*@rem;
+		top: 500*@rem;
+		-webkit-animation: mj1 1s .2s linear infinite alternate both;
+	}
+	.mj3 {
+		width: 83*@rem;
+		height: 90*@rem;
+		background: url(../images/mj3.png) no-repeat;
+		background-size: 83*@rem 90*@rem;
+		position: absolute;
+		left: 650*@rem;
+		top: 894*@rem;
+		-webkit-animation: mj2 1s .2s linear infinite alternate both;
+	}
+	.mj4 {
+		width: 68*@rem;
+		height: 80*@rem;
+		background: url(../images/mj4.png) no-repeat;
+		background-size: 68*@rem 80*@rem;
+		position: absolute;
+		left: 40*@rem;
+		top: 970*@rem;
+		-webkit-animation: mj2 1s .6s linear infinite alternate both;
+	}
+	.silver1 {
+		width: 73*@rem;
+		height: 62*@rem;
+		background: url(../images/silver1.png) no-repeat;
+		background-size: 73*@rem 62*@rem;
+		position: absolute;
+		left: 0;
+		top: 598*@rem;
+		-webkit-animation: silver1 1s .2s linear infinite alternate both;
+	}
+	.silver2 {
+		width: 62*@rem;
+		height: 51*@rem;
+		background: url(../images/silver2.png) no-repeat;
+		background-size: 62*@rem 51*@rem;
+		position: absolute;
+		right: 20*@rem;
+		top: 690*@rem;
+		-webkit-animation: silver1 1s .2s linear infinite alternate both;
+	}
+
+}
+
+@-webkit-keyframes btn {
+	0% {-webkit-transform: scale(0.92);}
+	100% {-webkit-transform: scale(1);}
+}
+
+@-webkit-keyframes silver1 {
+	0% {-webkit-transform: rotateZ(0deg);}
+	100% {-webkit-transform: rotateZ(20deg);}
+}
+
+@-webkit-keyframes mj1 {
+	0% {-webkit-transform: rotateZ(0deg);}
+	100% {-webkit-transform: rotateZ(10deg);}
+}
+
+@-webkit-keyframes mj2 {
+	0% {-webkit-transform: translate3d(0, 0, 0);}
+	100% {-webkit-transform: translate3d(0, 10%, 0);}
+}
+
+
+@-webkit-keyframes cloud-left {
+	0% {-webkit-transform: translate3d(0, 0, 0)}
+	100% {-webkit-transform: translate3d(20%, 0, 0)}
+}
+
+@-webkit-keyframes cloud-right {
+	0% {-webkit-transform: translate3d(0, 0, 0)}
+	100% {-webkit-transform: translate3d(-20%, 0, 0)}
+}
+
+@-webkit-keyframes coin1 {
+	0% {-webkit-transform: translate3d(0, 0, 0) ;}
+	100% {-webkit-transform: translate3d(0, 400%, 0); opacity:0; }
+}
+
+
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and(-webkit-device-pixel-ratio: 3) {
+	.pg-activity-1 {
+		width: 750*@rem;
+		height: 114*@rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url(../images/bg-x-1.jpg) no-repeat;
+		background-size: 750*@rem 114*@rem;
+	}
+	.pg-activity-2 {
+		width: 750*@rem;
+		height: 114*@rem;
+		position: absolute;
+		top: 1334*@rem;
+		left: 0;
+		background: url(../images/bg-x-2.jpg) no-repeat;
+		background-size: 750*@rem 114*@rem;
+	}
+}

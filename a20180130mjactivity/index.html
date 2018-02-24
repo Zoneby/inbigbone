@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>过年打牌，新年發财</title>
+<script>
+!function(b, a) {
+	var c = b.documentElement;
+		a = function() {
+			var a = c.clientWidth;
+				a && (c.style.fontSize = a/375*100+"px")
+		};
+		window.addEventListener("orientationchange" in window ? "orientationchange" : "resize", a, !1);
+		a();
+}(document, window);
+</script>
+<link rel="stylesheet" href="./styles/main.css">
+</head>
+<style>
+
+</style>
+<body ontouchmove="return false;">
+	<div class="container">
+		<div class="btn download-btn"></div>
+		<div class="cloud-left"></div>
+		<div class="cloud-right"></div>
+		<div class="coin1 c1"></div>
+		<div class="coin2 c2"></div>
+		<div class="coin1 c3"></div>
+		<!-- <div class="coin2 c4"></div> -->
+		<div class="coin1 c5"></div>
+		<div class="coin2 c6"></div>
+
+		<div class="mj1"></div>
+		<div class="mj2"></div>
+		<div class="mj3"></div>
+		<div class="mj4"></div>
+		<div class="silver1"></div>
+		<div class="silver2"></div>
+
+		
+	</div>
+	<div class="pg-activity-1"></div>
+	<div class="pg-activity-2"></div>
+</body>
+<script src="//game.gtimg.cn/images/js/zepto/zepto1.2.js"></script>
+<script>
+	$('.download-btn').on("click", function() {
+		try{PTTSendClick('btn','download','下载');}catch(e){};
+		location.href = "http://huanle.qq.com/m/mj/d/index.html";
+		// alert("下载按钮～");
+	});
+</script>
+</html>
